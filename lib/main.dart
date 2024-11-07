@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:katec/db_test.dart';
 import 'package:katec/home.dart';
 import 'package:katec/view/InputView/agence_form.dart';
 import 'package:katec/view/InputView/category_form.dart';
@@ -12,6 +13,7 @@ import 'package:katec/view/parametre_view.dart';
 
 void main() {
   print("بسم الله");
+
   runApp(const MyApp());
 }
 
@@ -25,7 +27,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       color: Colors.amber,
       routes: {
-        "/": (context) => Home(),
+        "/": (context) => MyHomePage(
+              title: "salam",
+            ),
         "camionview": (context) => const CamionView(),
         "parametreview": (context) => const ParametreView(),
         "serviceform": (context) => const ServiceForm(),
