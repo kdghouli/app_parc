@@ -52,12 +52,33 @@ class Home extends StatelessWidget {
                     textIco: "Users", ikon: Icon(Icons.admin_panel_settings)),
                 IconsParc(textIco: "Table de bord", ikon: Icon(Icons.dashboard))
               ])),
-          Container(
-              child: MaterialButton(
-                  onPressed: () {
-                    db.supprimerDb();
-                  },
-                  child: const Text("Réinialisation"))),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+MaterialButton(
+              onPressed: () {
+                db.supprimerDb();
+              },
+              color: Colors.blueAccent,
+              child: const Text("Réinialisation")),
+          MaterialButton(
+              color: Colors.blueAccent,
+              onPressed: () async {
+                print("sava");
+                //await db.getDbPath();
+                await db.backupDb();
+              },
+              child: Text("BackUp")),
+          MaterialButton(
+              color: Colors.blueAccent,
+              onPressed: () async {
+                //await db.getDbPath();
+                await db.restoreDb();
+              },
+              child: Text("Restore")),
+              ],
+
+              )
+          
         ]),
       ),
     );

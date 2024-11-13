@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:katec/sqldb.dart';
 
 class CamionView extends StatefulWidget {
@@ -57,6 +58,9 @@ class _CamionViewState extends State<CamionView> {
                 title: Text("${data[i]['matricule']}"),
                 subtitle: Text("${data[i]['marque']}"),
                 trailing: Text("${data[i]['agence_id']}"),
+                onTap: () => {
+                  Get.toNamed("vhlview", arguments: [data[i]]),
+                },
               ),
             );
           },

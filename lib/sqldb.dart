@@ -1,5 +1,9 @@
+import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:sqflite/sqflite.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart';
+import 'dart:io';
 
 class SqlDb {
   static Database? _db;
@@ -122,6 +126,18 @@ CREATE TABLE `vhls`  (
         {'nomAgence': 'Beni mellal', 'site': 'CBGS', 'division': 'M220'});
     batch.insert("agences",
         {'nomAgence': 'Khouribga', 'site': 'CBGS', 'division': 'M260'});
+    batch.insert("agences",
+        {'nomAgence': 'Ouarzazate', 'site': 'CBGS', 'division': 'M280'});
+    batch.insert(
+        "agences", {'nomAgence': 'Safi', 'site': 'CBGS', 'division': 'M240'});
+    batch.insert("agences",
+        {'nomAgence': 'Essaouira', 'site': 'CBGS', 'division': 'M230'});
+    batch.insert("agences",
+        {'nomAgence': 'Sidi Bennour', 'site': 'CBGS', 'division': 'M250'});
+    batch.insert("agences",
+        {'nomAgence': 'El Kelaa', 'site': 'CBGS', 'division': 'M270'});
+    batch.insert("agences",
+        {'nomAgence': 'Ain Harrouda', 'site': 'SCBG', 'division': 'M170'});
 
     batch.insert("services", {'nomService': 'Commercial'});
     batch.insert("services", {'nomService': 'Distribution'});
@@ -299,6 +315,51 @@ CREATE TABLE `vhls`  (
     String databasepath = await getDatabasesPath();
     String path = join(databasepath, "mmr.db");
     await deleteDatabase(path);
-    print("la base est supprimer");
+    print("la base a été supprimer");
+  }
+
+  getDbPath() async {
+    String databasePath = await getDatabasesPath();
+    print("databasePath : $databasePath");
+    Directory? externalStoragePath = await getExternalStorageDirectory();
+    print("externalStoragePath : $externalStoragePath");
+  }
+
+  backupDb() async {
+    var status = await Permission.manageExternalStorage.status;
+    if (!status.isGranted) {
+      await Permission.manageExternalStorage.request();
+    }
+    var status1 = await Permission.storage.status;
+    if (!status1.isGranted) {
+      await Permission.storage.request();
+    }
+
+    try {
+      File ourDbFile = File('/data/user/0/com.example.katec/databases/mmr.db');
+      Directory? folderPathforDbFile = Directory('/storage/emulated/0/MMRDB/');
+      await folderPathforDbFile.create(recursive: true);
+      await ourDbFile.copySync('/storage/emulated/0/MMRDB/mmr.db');
+    } catch (e) {
+      print("================================Error${e.toString()}");
+    }
+  }
+
+  restoreDb() async {
+    var status = await Permission.manageExternalStorage.status;
+    if (!status.isGranted) {
+      await Permission.manageExternalStorage.request();
+    }
+    var status1 = await Permission.storage.status;
+    if (!status1.isGranted) {
+      await Permission.storage.request();
+    }
+    await supprimerDb();
+    try {
+      File savedDbFile = File('/storage/emulated/0/MMRDB/mmr.db');
+      await savedDbFile.copy('/data/user/0/com.example.katec/databases/mmr.db');
+    } catch (e) {
+      print("================================Error${e.toString()}");
+    }
   }
 }
