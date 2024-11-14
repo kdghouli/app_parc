@@ -16,6 +16,8 @@ SqlDb sqlDb = SqlDb();
 List data = [];
 
 class _VhlViewState extends State<VhlView> {
+
+  int currentPageIndex = 0;
   Future<List> getList() async {
     List response = await sqlDb.readData(
         '''SELECT categories.id,categories.nomCategorie ,count(vhls.matricule) AS Nb
@@ -36,7 +38,9 @@ ORDER BY categories.id ''');
         bottomNavigationBar: BottomNavigationBar(
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.assignment), label: "Donnèes"),
+                icon: Icon(Icons.assignment),
+                label: "Donnèes",
+                ),
             BottomNavigationBarItem(icon: Icon(Icons.history), label: "Hist"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.receipt), label: "Papiers"),

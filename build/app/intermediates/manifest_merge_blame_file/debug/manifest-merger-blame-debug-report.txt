@@ -13,17 +13,17 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\debug\AndroidManifest.xml:6:5-66
-15-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\debug\AndroidManifest.xml:6:22-64
+15-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\debug\AndroidManifest.xml:6:5-66
+15-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\debug\AndroidManifest.xml:6:22-64
 16    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-16-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:2:1-78
-16-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:2:18-75
+16-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:2:1-78
+16-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:2:18-75
 17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-17-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:3:1-75
-17-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:3:18-73
+17-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:3:1-75
+17-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:3:18-73
 18    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-18-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:4:1-76
-18-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:4:18-74
+18-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:4:1-76
+18-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:4:18-74
 19    <!--
 20 Required to query activities that can process text, see:
 21         https://developer.android.com/training/package-visibility and
@@ -32,16 +32,16 @@
 24         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
 25    -->
 26    <queries>
-26-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:43:5-48:15
+26-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:43:5-48:15
 27        <intent>
-27-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:44:9-47:18
+27-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:44:9-47:18
 28            <action android:name="android.intent.action.PROCESS_TEXT" />
-28-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:45:13-72
-28-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:45:21-70
+28-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:45:13-72
+28-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:45:21-70
 29
 30            <data android:mimeType="text/plain" />
-30-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:46:13-50
-30-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:46:19-48
+30-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:46:13-50
+30-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:46:19-48
 31        </intent>
 32    </queries>
 33
