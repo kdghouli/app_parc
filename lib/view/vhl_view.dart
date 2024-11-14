@@ -36,6 +36,7 @@ ORDER BY categories.id ''');
   Widget build(BuildContext context) {
     return Scaffold(
         bottomNavigationBar: BottomNavigationBar(
+          
           items: [
             BottomNavigationBarItem(
                 icon: Icon(Icons.assignment),
