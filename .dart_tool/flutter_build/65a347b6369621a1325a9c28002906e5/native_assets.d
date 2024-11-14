@@ -1,0 +1,1 @@
+ C:\\Users\\KATEC\\Desktop\\katec_mobile\\katec\\.dart_tool\\flutter_build\\65a347b6369621a1325a9c28002906e5\\native_assets.yaml: 
