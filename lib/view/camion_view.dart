@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
-import 'package:katec/sqldb.dart';
+import 'package:katec/controllers/test_getx_controller.dart';
+import 'package:katec/helpers/sqldb.dart';
 
 class CamionView extends StatefulWidget {
   const CamionView({super.key});
@@ -9,69 +11,50 @@ class CamionView extends StatefulWidget {
   State<CamionView> createState() => _CamionViewState();
 }
 
+TestGetxController controller = Get.put(TestGetxController());
+
 class _CamionViewState extends State<CamionView> {
-  SqlDb sqlDb = SqlDb();
-
-  List data = [];
-
-  Future<List> getList() async {
-    List response = await sqlDb.read("vhls");
-    print(response);
-    data.addAll(response.where((ele) => ele['categorie_id'] == 1));
-    setState(() {});
-    return response;
-  }
-
-  @override
-  void initState() {
-    getList();
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
+    controller.getVhlsComplet();
     var borderRadius = const BorderRadius.only(
-        topRight: Radius.circular(10), bottomRight: Radius.circular(10));
+        topRight: Radius.circular(3), bottomRight: Radius.circular(3));
     return Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          backgroundColor: Colors.amber,
-          child: const Text("data"),
-        ),
         appBar: AppBar(
           title: const Text("Liste des camions"),
           backgroundColor: Colors.grey,
         ),
-        body: ListView.builder(
-          padding: const EdgeInsets.all(4),
-          itemCount: data.length,
-          itemBuilder: (context, i) {
-            return Card(
-              child: ListTile(
-                shape: RoundedRectangleBorder(borderRadius: borderRadius),
-                leading: const Icon(
-                  Icons.local_shipping,
-                  color: Colors.redAccent,
-                  size: 25,
-                ),
-                dense: true,
-                title: Text("${data[i]['matricule']}"),
-                subtitle: Text("${data[i]['marque']}"),
-                trailing: Text("${data[i]['agence_id']}"),
-                onTap: () => {
-                  Get.toNamed("vhlview", arguments: [data[i]]),
-                },
-              ),
-            );
-          },
+        body: GetBuilder<TestGetxController>(
+          builder: (controller) => SingleChildScrollView(
+              child: Column(children: [
+            ListView.builder(
+                padding: const EdgeInsets.all(3),
+                shrinkWrap: true,
+                itemCount: controller.data.length,
+                itemBuilder: (context, i) {
+                  return Card(
+                    margin: EdgeInsets.all(2),
+                    child: ListTile(
+                      shape: RoundedRectangleBorder(borderRadius: borderRadius),
+                      leading: const Icon(
+                        Icons.local_shipping,
+                        color: Colors.redAccent,
+                        size: 26,
+                      ),
+                      dense: true,
+                      title: Text("${controller.data[i]['matricule']}"),
+                      subtitle: Text("${controller.data[i]['marque']}"),
+                      trailing: Text(
+                        "${controller.data[i]['Affectation']}",
+                        style: TextStyle(fontSize: 11),
+                      ),
+                      onTap: () => {
+                        Get.toNamed("vhlview", arguments: [controller.data[i]]),
+                      },
+                    ),
+                  );
+                })
+          ])),
         ));
   }
 }
-
-
-// children: [
-//             ...List.generate(
-//                 data.length,
-//                 (i) =>
-//                     Text("${data[i]['matricule']} - ${data[i]['agence_id']}")),
-//           ],

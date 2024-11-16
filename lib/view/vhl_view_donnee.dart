@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
 import 'package:katec/controllers/test_getx_controller.dart';
-import 'package:katec/sqldb.dart';
+import 'package:katec/helpers/sqldb.dart';
 
 class VhlViewDonnee extends StatefulWidget {
   const VhlViewDonnee({super.key});

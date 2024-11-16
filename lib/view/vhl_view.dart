@@ -31,7 +31,9 @@ class _VhlViewState extends State<VhlView> {
                 icon: Icon(Icons.receipt), label: "Papiers"),
           ],
           currentIndex: selectedPage,
+          selectedItemColor: Colors.redAccent,
           elevation: 5.0,
+          unselectedItemColor: Colors.green[300],
           backgroundColor: Colors.white,
           onTap: (index) {
             setState(() {

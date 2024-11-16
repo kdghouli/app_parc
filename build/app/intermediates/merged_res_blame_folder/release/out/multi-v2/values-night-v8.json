@@ -4,7 +4,7 @@
             "outputFile": "com.example.katec.app-mergeReleaseResources-25:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\KATEC\\Desktop\\katec_mobile\\katec\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "C:\\Users\\KATEC\\Desktop\\katec_mobile\\app-parc\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

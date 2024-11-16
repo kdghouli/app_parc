@@ -6,19 +6,19 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml
+8-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="34" />
-9-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml
+9-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-11-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:2:1-78
-11-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:2:18-75
+11-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:2:1-78
+11-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:2:18-75
 12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-12-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:3:1-75
-12-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:3:18-73
+12-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:3:1-75
+12-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:3:18-73
 13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-13-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:4:1-76
-13-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:4:18-74
+13-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:4:1-76
+13-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:4:18-74
 14    <!--
 15         Required to query activities that can process text, see:
 16         https://developer.android.com/training/package-visibility and
@@ -27,16 +27,16 @@
 19         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
 20    -->
 21    <queries>
-21-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:43:5-48:15
+21-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:43:5-48:15
 22        <intent>
-22-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:44:9-47:18
+22-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:44:9-47:18
 23            <action android:name="android.intent.action.PROCESS_TEXT" />
-23-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:45:13-72
-23-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:45:21-70
+23-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:45:13-72
+23-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:45:21-70
 24
 25            <data android:mimeType="text/plain" />
-25-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:46:13-50
-25-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:46:19-48
+25-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:46:13-50
+25-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:46:19-48
 26        </intent>
 27    </queries>
 28
@@ -53,33 +53,33 @@
 34
 35    <application
 36        android:name="android.app.Application"
-36-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:7:9-42
+36-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:7:9-42
 37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 37-->[androidx.core:core:1.13.1] C:\Users\KATEC\.gradle\caches\transforms-3\fac84cd5ecf1ec88a8c98571217c9350\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 38        android:icon="@mipmap/ic_launcher"
-38-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:9:9-43
+38-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:9:9-43
 39        android:label="katec"
-39-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:6:9-30
+39-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:6:9-30
 40        android:requestLegacyExternalStorage="true" >
-40-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:8:9-52
+40-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:8:9-52
 41        <activity
-41-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:10:9-31:20
+41-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:10:9-31:20
 42            android:name="com.example.katec.MainActivity"
-42-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:11:13-41
+42-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:11:13-41
 43            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-43-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:16:13-163
+43-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:16:13-163
 44            android:exported="true"
-44-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:12:13-36
+44-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:12:13-36
 45            android:hardwareAccelerated="true"
-45-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:17:13-47
+45-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:17:13-47
 46            android:launchMode="singleTop"
-46-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:13:13-43
+46-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:13:13-43
 47            android:taskAffinity=""
-47-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:14:13-36
+47-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:14:13-36
 48            android:theme="@style/LaunchTheme"
-48-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:15:13-47
+48-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:15:13-47
 49            android:windowSoftInputMode="adjustResize" >
-49-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:18:13-55
+49-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:18:13-55
 50
 51            <!--
 52                 Specifies an Android theme to apply to this Activity as soon as
@@ -88,21 +88,21 @@
 55                 to determine the Window background behind the Flutter UI.
 56            -->
 57            <meta-data
-57-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:23:13-26:17
+57-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:23:13-26:17
 58                android:name="io.flutter.embedding.android.NormalTheme"
-58-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:24:15-70
+58-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:24:15-70
 59                android:resource="@style/NormalTheme" />
-59-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:25:15-52
+59-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:25:15-52
 60
 61            <intent-filter>
-61-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:27:13-30:29
+61-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:27:13-30:29
 62                <action android:name="android.intent.action.MAIN" />
-62-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:28:17-68
-62-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:28:25-66
+62-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:28:17-68
+62-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:28:25-66
 63
 64                <category android:name="android.intent.category.LAUNCHER" />
-64-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:29:17-76
-64-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:29:27-74
+64-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:29:17-76
+64-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:29:27-74
 65            </intent-filter>
 66        </activity>
 67        <!--
@@ -110,11 +110,11 @@
 69             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
 70        -->
 71        <meta-data
-71-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:34:9-36:33
+71-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:34:9-36:33
 72            android:name="flutterEmbedding"
-72-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:35:13-44
+72-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:35:13-44
 73            android:value="2" />
-73-->C:\Users\KATEC\Desktop\katec_mobile\katec\android\app\src\main\AndroidManifest.xml:36:13-30
+73-->C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app\src\main\AndroidManifest.xml:36:13-30
 74
 75        <uses-library
 75-->[androidx.window:window:1.2.0] C:\Users\KATEC\.gradle\caches\transforms-3\d47b1192960df52846144d82ac9e1d6f\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40

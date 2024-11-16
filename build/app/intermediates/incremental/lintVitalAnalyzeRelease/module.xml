@@ -1,11 +1,11 @@
 <lint-module
     format="1"
-    dir="C:\Users\KATEC\Desktop\katec_mobile\katec\android\app"
+    dir="C:\Users\KATEC\Desktop\katec_mobile\app-parc\android\app"
     name=":app"
     type="APP"
     maven="android:app:"
     gradle="7.3.0"
-    buildFolder="C:\Users\KATEC\Desktop\katec_mobile\katec\build\app"
+    buildFolder="C:\Users\KATEC\Desktop\katec_mobile\app-parc\build\app"
     bootClassPath="C:\Users\KATEC\AppData\Local\Android\Sdk\platforms\android-34\android.jar;C:\Users\KATEC\AppData\Local\Android\Sdk\build-tools\30.0.3\core-lambda-stubs.jar"
     javaSourceLevel="1.8"
     compileTarget="android-34">

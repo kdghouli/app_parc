@@ -1,13 +1,13 @@
 <libraries>
   <library
-      name="__local_aars__:C:\Users\KATEC\Desktop\katec_mobile\katec\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
-      jars="C:\Users\KATEC\Desktop\katec_mobile\katec\build\app\intermediates\flutter\release\libs.jar"
-      resolved="__local_aars__:C:\Users\KATEC\Desktop\katec_mobile\katec\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
+      name="__local_aars__:C:\Users\KATEC\Desktop\katec_mobile\app-parc\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
+      jars="C:\Users\KATEC\Desktop\katec_mobile\app-parc\build\app\intermediates\flutter\release\libs.jar"
+      resolved="__local_aars__:C:\Users\KATEC\Desktop\katec_mobile\app-parc\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
   <library
-      name="C:\Users\KATEC\Desktop\katec_mobile\katec\android@@:path_provider_android::release"
-      jars="C:\Users\KATEC\Desktop\katec_mobile\katec\build\path_provider_android\.transforms\b3212e1a03ac24a29b727f0ca119af16\transformed\out\jars\classes.jar;C:\Users\KATEC\Desktop\katec_mobile\katec\build\path_provider_android\.transforms\b3212e1a03ac24a29b727f0ca119af16\transformed\out\jars\libs\R.jar"
+      name="C:\Users\KATEC\Desktop\katec_mobile\app-parc\android@@:path_provider_android::release"
+      jars="C:\Users\KATEC\Desktop\katec_mobile\app-parc\build\path_provider_android\.transforms\236c39b6e26cb3b2c3702477557f059a\transformed\out\jars\classes.jar;C:\Users\KATEC\Desktop\katec_mobile\app-parc\build\path_provider_android\.transforms\236c39b6e26cb3b2c3702477557f059a\transformed\out\jars\libs\R.jar"
       resolved="io.flutter.plugins.pathprovider:path_provider_android:unspecified"
-      folder="C:\Users\KATEC\Desktop\katec_mobile\katec\build\path_provider_android\.transforms\b3212e1a03ac24a29b727f0ca119af16\transformed\out"
+      folder="C:\Users\KATEC\Desktop\katec_mobile\app-parc\build\path_provider_android\.transforms\236c39b6e26cb3b2c3702477557f059a\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -17,10 +17,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\Users\KATEC\Desktop\katec_mobile\katec\android@@:permission_handler_android::release"
-      jars="C:\Users\KATEC\Desktop\katec_mobile\katec\build\permission_handler_android\.transforms\406e01c1fb5165ea61c563ef53849df0\transformed\out\jars\classes.jar;C:\Users\KATEC\Desktop\katec_mobile\katec\build\permission_handler_android\.transforms\406e01c1fb5165ea61c563ef53849df0\transformed\out\jars\libs\R.jar"
+      name="C:\Users\KATEC\Desktop\katec_mobile\app-parc\android@@:permission_handler_android::release"
+      jars="C:\Users\KATEC\Desktop\katec_mobile\app-parc\build\permission_handler_android\.transforms\8e5f4464c6cbcee287e221011d5508d0\transformed\out\jars\classes.jar;C:\Users\KATEC\Desktop\katec_mobile\app-parc\build\permission_handler_android\.transforms\8e5f4464c6cbcee287e221011d5508d0\transformed\out\jars\libs\R.jar"
       resolved="com.baseflow.permissionhandler:permission_handler_android:unspecified"
-      folder="C:\Users\KATEC\Desktop\katec_mobile\katec\build\permission_handler_android\.transforms\406e01c1fb5165ea61c563ef53849df0\transformed\out"
+      folder="C:\Users\KATEC\Desktop\katec_mobile\app-parc\build\permission_handler_android\.transforms\8e5f4464c6cbcee287e221011d5508d0\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -30,10 +30,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\Users\KATEC\Desktop\katec_mobile\katec\android@@:sqflite_android::release"
-      jars="C:\Users\KATEC\Desktop\katec_mobile\katec\build\sqflite_android\.transforms\03539f28a115694cb9d4f07e8acfc95f\transformed\out\jars\classes.jar;C:\Users\KATEC\Desktop\katec_mobile\katec\build\sqflite_android\.transforms\03539f28a115694cb9d4f07e8acfc95f\transformed\out\jars\libs\R.jar"
+      name="C:\Users\KATEC\Desktop\katec_mobile\app-parc\android@@:sqflite_android::release"
+      jars="C:\Users\KATEC\Desktop\katec_mobile\app-parc\build\sqflite_android\.transforms\21b11cb39f4ff556814f13af797e7a99\transformed\out\jars\classes.jar;C:\Users\KATEC\Desktop\katec_mobile\app-parc\build\sqflite_android\.transforms\21b11cb39f4ff556814f13af797e7a99\transformed\out\jars\libs\R.jar"
       resolved="com.tekartik.sqflite:sqflite_android:unspecified"
-      folder="C:\Users\KATEC\Desktop\katec_mobile\katec\build\sqflite_android\.transforms\03539f28a115694cb9d4f07e8acfc95f\transformed\out"
+      folder="C:\Users\KATEC\Desktop\katec_mobile\app-parc\build\sqflite_android\.transforms\21b11cb39f4ff556814f13af797e7a99\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
