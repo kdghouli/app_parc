@@ -15,8 +15,13 @@ TestGetxController controller = Get.put(TestGetxController());
 
 class _CamionViewState extends State<CamionView> {
   @override
-  Widget build(BuildContext context) {
+  void initState() {
+    super.initState();
     controller.getVhlsCategorie(1);
+  }
+
+  @override
+  Widget build(BuildContext context) {
     var borderRadius = const BorderRadius.only(
         topRight: Radius.circular(3), bottomRight: Radius.circular(3));
     return Scaffold(
@@ -28,6 +33,7 @@ class _CamionViewState extends State<CamionView> {
           builder: (controller) => SingleChildScrollView(
               child: Column(children: [
             ListView.builder(
+                physics: PageScrollPhysics(),
                 padding: const EdgeInsets.all(3),
                 shrinkWrap: true,
                 itemCount: controller.data.length,

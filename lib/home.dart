@@ -11,7 +11,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("home page"),
+        title: const Text("Home page"),
         backgroundColor: Colors.yellowAccent,
         actions: [
           IconButton(
@@ -34,11 +34,11 @@ class Home extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                 IconsParc(
-                    textIco: "distribution",
+                    textIco: "Distribution",
                     ikon: Icon(Icons.local_shipping),
                     page: "camionview"),
                 IconsParc(
-                    textIco: "voiture",
+                    textIco: "Voiture",
                     ikon: Icon(Icons.directions_car),
                     page: "voitureview")
               ])),

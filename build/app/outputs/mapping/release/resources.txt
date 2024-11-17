@@ -1667,6 +1667,13 @@ Marking id:line3:2131165241 used because it matches string pool constant line
 @layout/notification_template_part_time : reachable=true
     @style/TextAppearance_Compat_Notification_Time
 @mipmap/ic_launcher : reachable=true
+    @mipmap/ic_launcher_background
+    @mipmap/ic_launcher_foreground
+    @mipmap/ic_launcher_monochrome
+@mipmap/ic_launcher_background : reachable=false
+@mipmap/ic_launcher_foreground : reachable=false
+@mipmap/ic_launcher_monochrome : reachable=false
+@mipmap/launcher_icon : reachable=false
 @string/androidx_startup : reachable=true
 @string/call_notification_answer_action : reachable=false
 @string/call_notification_answer_video_action : reachable=false
@@ -1857,3 +1864,9 @@ Skipped unused resource res/drawable-anydpi-v21/ic_call_decline_low.xml: 1547 by
 Skipped unused resource res/layout/custom_dialog.xml: 828 bytes (replaced with small dummy file of size 9 bytes)
 Skipped unused resource res/layout/ime_base_split_test_activity.xml: 365 bytes (replaced with small dummy file of size 9 bytes)
 Skipped unused resource res/layout/ime_secondary_split_test_activity.xml: 1465 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/mipmap-mdpi-v4/launcher_icon.png: 4136 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/mipmap-hdpi-v4/launcher_icon.png: 8090 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/mipmap-xhdpi-v4/launcher_icon.png: 13163 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/mipmap-xxhdpi-v4/launcher_icon.png: 26543 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/mipmap-xxxhdpi-v4/launcher_icon.png: 44240 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/mipmap-anydpi-v26/launcher_icon.xml: 84 bytes (replaced with small dummy file of size 9 bytes)

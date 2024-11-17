@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
 import 'package:katec/controllers/test_getx_controller.dart';
-import 'package:katec/helpers/sqldb.dart';
 
 class VoitureView extends StatefulWidget {
   const VoitureView({super.key});
@@ -11,23 +10,29 @@ class VoitureView extends StatefulWidget {
   State<VoitureView> createState() => _VoitureViewState();
 }
 
-TestGetxController controller = Get.put(TestGetxController());
+final controller = Get.put(TestGetxController());
 
 class _VoitureViewState extends State<VoitureView> {
   @override
-  Widget build(BuildContext context) {
+  void initState() {
+    super.initState();
     controller.getVhlsCategorie(2);
+  }
+
+  @override
+  Widget build(BuildContext context) {
     var borderRadius = const BorderRadius.only(
         topRight: Radius.circular(3), bottomRight: Radius.circular(3));
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Liste des camions"),
+          title: const Text("Liste des voitures"),
           backgroundColor: Colors.grey,
         ),
         body: GetBuilder<TestGetxController>(
           builder: (controller) => SingleChildScrollView(
               child: Column(children: [
             ListView.builder(
+                physics: PageScrollPhysics(),
                 padding: const EdgeInsets.all(3),
                 shrinkWrap: true,
                 itemCount: controller.data.length,

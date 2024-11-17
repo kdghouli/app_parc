@@ -44,9 +44,16 @@ class _VhlViewState extends State<VhlView> {
           title: Text(
             "${Get.arguments[0]['matricule']}",
             style: TextStyle(
-                fontWeight: FontWeight.w500,
-                color: Colors.deepOrange,
-                fontSize: 28),
+                fontWeight: FontWeight.w900,
+                color: Colors.green[900],
+                fontSize: 29,
+                letterSpacing: 4,
+                shadows: [
+                  Shadow(
+                      color: const Color.fromARGB(255, 250, 246, 246),
+                      offset: Offset(2, 1),
+                      blurRadius: 2)
+                ]),
           ),
           backgroundColor: Colors.grey[400],
           shadowColor: Colors.tealAccent),

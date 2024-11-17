@@ -1,4 +1,4 @@
-#Sat Nov 16 19:34:18 WEST 2024
+#Sun Nov 17 20:38:43 WEST 2024
 base.0=C\:\\Users\\KATEC\\Desktop\\katec_mobile\\app-parc\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\KATEC\\Desktop\\katec_mobile\\app-parc\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\KATEC\\Desktop\\katec_mobile\\app-parc\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
