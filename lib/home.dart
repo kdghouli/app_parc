@@ -34,51 +34,66 @@ class Home extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                 IconsParc(
-                    textIco: "distribution", ikon: Icon(Icons.local_shipping)),
-                IconsParc(textIco: "voiture", ikon: Icon(Icons.directions_car))
-              ])),
-          const Expanded(
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                IconsParc(textIco: "Chariots", ikon: Icon(Icons.forklift)),
-                IconsParc(textIco: "Scooter", ikon: Icon(Icons.delivery_dining))
+                    textIco: "distribution",
+                    ikon: Icon(Icons.local_shipping),
+                    page: "camionview"),
+                IconsParc(
+                    textIco: "voiture",
+                    ikon: Icon(Icons.directions_car),
+                    page: "voitureview")
               ])),
           const Expanded(
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                 IconsParc(
-                    textIco: "Users", ikon: Icon(Icons.admin_panel_settings)),
-                IconsParc(textIco: "Table de bord", ikon: Icon(Icons.dashboard))
+                    textIco: "Chariots",
+                    ikon: Icon(Icons.forklift),
+                    page: "camionview"),
+                IconsParc(
+                    textIco: "Scooter",
+                    ikon: Icon(Icons.delivery_dining),
+                    page: "camionview")
               ])),
-              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-MaterialButton(
-              onPressed: () {
-                db.supprimerDb();
-              },
-              color: Colors.blueAccent,
-              child: const Text("Réinialisation")),
-          MaterialButton(
-              color: Colors.blueAccent,
-              onPressed: () async {
-                print("sava");
-                //await db.getDbPath();
-                await db.backupDb();
-              },
-              child: Text("BackUp")),
-          MaterialButton(
-              color: Colors.blueAccent,
-              onPressed: () async {
-                //await db.getDbPath();
-                await db.restoreDb();
-              },
-              child: Text("Restore")),
-              ],
-
-              )
-          
+          const Expanded(
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                IconsParc(
+                    textIco: "Users",
+                    ikon: Icon(Icons.admin_panel_settings),
+                    page: "camionview"),
+                IconsParc(
+                    textIco: "Table de bord",
+                    ikon: Icon(Icons.dashboard),
+                    page: "camionview")
+              ])),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              MaterialButton(
+                  onPressed: () {
+                    db.supprimerDb();
+                  },
+                  color: Colors.blueAccent,
+                  child: const Text("Réinialisation")),
+              MaterialButton(
+                  color: Colors.blueAccent,
+                  onPressed: () async {
+                    print("sava");
+                    //await db.getDbPath();
+                    await db.backupDb();
+                  },
+                  child: Text("BackUp")),
+              MaterialButton(
+                  color: Colors.blueAccent,
+                  onPressed: () async {
+                    //await db.getDbPath();
+                    await db.restoreDb();
+                  },
+                  child: Text("Restore")),
+            ],
+          )
         ]),
       ),
     );

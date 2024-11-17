@@ -32,7 +32,7 @@ class _VhlViewDonneeState extends State<VhlViewDonnee> {
   Widget build(BuildContext context) {
     return ListView(padding: EdgeInsets.all(6), children: [
       Text("${Get.arguments[0]['marque']}"),
-      Text("${Get.arguments[0]['agence_id']}"),
+      Text("${Get.arguments[0]['Affectation']}"),
       MaterialButton(
           child: Text("Test"),
           onPressed: () {

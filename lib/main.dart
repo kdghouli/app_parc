@@ -7,7 +7,8 @@ import 'package:katec/view/InputView/intitule_form.dart';
 import 'package:katec/view/InputView/service_form.dart';
 import 'package:katec/view/InputView/status_form.dart';
 import 'package:katec/view/InputView/vhl_form.dart';
-import 'package:katec/view/camion_view.dart';
+import 'package:katec/view/categoView/camion_view.dart';
+import 'package:katec/view/categoView/voiture_view.dart';
 import 'package:katec/view/parametre_view.dart';
 import 'package:katec/view/vhl_view.dart';
 
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => Home(),
         "camionview": (context) => const CamionView(),
+        "voitureview": (context) => const VoitureView(),
         "parametreview": (context) => const ParametreView(),
         "serviceform": (context) => const ServiceForm(),
         "agenceform": (context) => const AgenceForm(),

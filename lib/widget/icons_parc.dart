@@ -4,15 +4,17 @@ import 'package:get/get.dart';
 class IconsParc extends StatelessWidget {
   final String? textIco;
   final Icon ikon;
+  final String? page;
 
-  const IconsParc({super.key, required this.textIco, required this.ikon});
+  const IconsParc(
+      {super.key, required this.textIco, required this.ikon, this.page});
 
   @override
   Widget build(BuildContext context) {
     return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
       IconButton(
-          onPressed: () {
-          Get.toNamed("camionview");
+        onPressed: () {
+          Get.toNamed("$page");
         },
         icon: ikon,
         iconSize: 82.00,
