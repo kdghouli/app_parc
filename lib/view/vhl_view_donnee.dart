@@ -23,7 +23,7 @@ class _VhlViewDonneeState extends State<VhlViewDonnee> {
         GetBuilder<TestGetxController>(
             init: TestGetxController(),
             builder: (controller) => Row(children: [
-                  Text("Marque :"),
+                 Expanded(child: Text("Marque :")),
                 ]))
       ],
     );
