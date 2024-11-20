@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/route_manager.dart';
 import 'package:katec/controllers/test_getx_controller.dart';
 
 class VoitureView extends StatefulWidget {
