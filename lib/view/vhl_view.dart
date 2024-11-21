@@ -33,7 +33,7 @@ class _VhlViewState extends State<VhlView> {
           currentIndex: selectedPage,
           selectedItemColor: Colors.redAccent,
           elevation: 5.0,
-          unselectedItemColor: Colors.green[300],
+          unselectedItemColor: Colors.tealAccent[300],
           backgroundColor: Colors.white,
           onTap: (index) {
             setState(() {
@@ -45,7 +45,7 @@ class _VhlViewState extends State<VhlView> {
             "${Get.arguments[0]['matricule']}",
             style: TextStyle(
                 fontWeight: FontWeight.w900,
-                color: Colors.green[900],
+                color: Colors.teal[800],
                 fontSize: 29,
                 letterSpacing: 4,
                 shadows: [
