@@ -33,7 +33,7 @@ class CasierCustum extends StatelessWidget {
           Expanded(
               flex: 2,
               child: Text(
-                "${Get.arguments[0][nameCaseBase]}",
+                "${Get.arguments[0][nameCaseBase] ?? '--'}",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               )),
         ],

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:katec/controllers/test_getx_controller.dart';
 import 'package:katec/helpers/sqldb.dart';
-import 'package:katec/widget/casie_custum.dart';
+import 'package:katec/widget/casier_custum.dart';
 
 class VhlViewDonnee extends StatefulWidget {
   const VhlViewDonnee({super.key});
@@ -23,6 +23,7 @@ class _VhlViewDonneeState extends State<VhlViewDonnee> {
         CasierCustum(nameCase: "Marque :", nameCaseBase: "marque"),
         CasierCustum(nameCase: "Catégorie :", nameCaseBase: "Catègorie"),
         CasierCustum(nameCase: "Affectation :", nameCaseBase: "Affectation"),
+        CasierCustum(nameCase: "Chassis :", nameCaseBase: "dfg"),
         Container(
           margin: EdgeInsets.all(1),
           padding: EdgeInsets.all(8),

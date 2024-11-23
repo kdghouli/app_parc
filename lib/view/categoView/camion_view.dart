@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
 import 'package:katec/controllers/test_getx_controller.dart';
-import 'package:katec/helpers/sqldb.dart';
 
 class CamionView extends StatefulWidget {
   const CamionView({super.key});
@@ -50,7 +49,7 @@ class _CamionViewState extends State<CamionView> {
                       dense: true,
                       title: Text("${controller.data[i]['matricule']}"),
                       subtitle: Text(
-                          "${controller.data[i]['marque']}-${controller.data[i]['id']}"),
+                          "${controller.data[i]['marque']}-${controller.data[i]['Intitule']}"),
                       trailing: Text(
                         "${controller.data[i]['Affectation']}",
                         style: TextStyle(fontSize: 11),

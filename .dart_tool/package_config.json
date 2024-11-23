@@ -338,10 +338,10 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-11-20T18:58:07.105483Z",
+  "generated": "2024-11-23T08:03:39.509716Z",
   "generator": "pub",
-  "generatorVersion": "3.5.1",
+  "generatorVersion": "3.5.4",
   "flutterRoot": "file:///C:/flutter",
-  "flutterVersion": "3.24.1",
+  "flutterVersion": "3.24.5",
   "pubCache": "file:///C:/Users/KATEC/AppData/Local/Pub/Cache"
 }
