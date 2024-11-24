@@ -594,4 +594,4 @@ INSERT INTO "vhls" VALUES
   }
 }
 
- //("id", "matricule", "marque", "type", "ww", "chassis", "puissance", "date_mc", "equipement", "observation", "deleted_at", "created_at", "updated_at", "agence_id", "categorie_id", "intitule_id", "service_id", "utilisateur")
+//("id", "matricule", "marque", "type", "ww", "chassis", "puissance", "date_mc", "equipement", "observation", "deleted_at", "created_at", "updated_at", "agence_id", "categorie_id", "intitule_id", "service_id", "utilisateur")

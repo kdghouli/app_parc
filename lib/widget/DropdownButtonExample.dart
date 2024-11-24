@@ -12,7 +12,7 @@ SqlDb sqldb = SqlDb();
 
 class _DropdownButtonExampleState extends State<DropdownButtonExample> {
   List data = [];
-  
+
   var _dropdownvalue;
 
   getList() async {
