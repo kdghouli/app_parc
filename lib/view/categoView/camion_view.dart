@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
-import 'package:katec/controllers/test_getx_controller.dart';
+import 'package:katec/controllers/getx_controller.dart';
 
 class CamionView extends StatefulWidget {
   const CamionView({super.key});

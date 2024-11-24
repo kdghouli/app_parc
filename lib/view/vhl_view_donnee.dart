@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:katec/controllers/test_getx_controller.dart';
 import 'package:katec/helpers/sqldb.dart';
 import 'package:katec/widget/casier_custum.dart';
 
@@ -23,38 +21,8 @@ class _VhlViewDonneeState extends State<VhlViewDonnee> {
         CasierCustum(nameCase: "Marque :", nameCaseBase: "marque"),
         CasierCustum(nameCase: "Catégorie :", nameCaseBase: "Catègorie"),
         CasierCustum(nameCase: "Affectation :", nameCaseBase: "Affectation"),
-        CasierCustum(nameCase: "Chassis :", nameCaseBase: "dfg"),
-        Container(
-          margin: EdgeInsets.all(1),
-          padding: EdgeInsets.all(8),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(3.2),
-              boxShadow: [
-                BoxShadow(
-                    offset: Offset(1.2, 1.2),
-                    color: Colors.grey,
-                    blurRadius: 1.0)
-              ],
-              gradient: LinearGradient(colors: [
-                const Color.fromARGB(255, 163, 223, 217),
-                const Color.fromARGB(255, 111, 243, 230),
-              ])),
-          child: Row(
-            children: [
-              Expanded(
-                  child: Text(
-                "Intitule :",
-                style: TextStyle(color: Colors.grey[700]),
-              )),
-              Expanded(
-                  flex: 2,
-                  child: Text(
-                    "${Get.arguments[0]['Intitule']}",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  )),
-            ],
-          ),
-        )
+        CasierCustum(nameCase: "Chassis :", nameCaseBase: "chassis"),
+        CasierCustum(nameCase: "Intitule :", nameCaseBase: "Intitule"),
       ])
     ]);
   }

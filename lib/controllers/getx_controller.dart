@@ -6,6 +6,16 @@ class TestGetxController extends GetxController {
 
   List data = [];
 
+  @override
+  void onInit() {
+    super.onInit();
+  }
+
+  @override
+  void onClose() {
+    super.onClose();
+  }
+
   // Future<List> getListVhlCategorie(int idCatego) async {
   //   List response = await sqlDb.read("vhls");
   //   print(response);

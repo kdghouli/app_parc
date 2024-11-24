@@ -7,6 +7,7 @@ import 'package:katec/widget/icons_parc.dart';
 class Home extends StatelessWidget {
   Home({super.key});
   SqlDb db = SqlDb();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +25,7 @@ class Home extends StatelessWidget {
               ))
         ],
       ),
-      backgroundColor: Colors.tealAccent,
+      backgroundColor: Colors.teal,
       body: Container(
         padding: const EdgeInsets.all(20),
         color: Colors.amber[200],
