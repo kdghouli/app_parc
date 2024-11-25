@@ -24,7 +24,7 @@ class _VhlViewDonneeState extends State<VhlViewDonnee> {
         CasierCustum(nameCase: "Chassis :", nameCaseBase: "chassis"),
         CasierCustum(nameCase: "Intitule :", nameCaseBase: "Intitule"),
         Container(
-            height: 300,
+            height: 350,
             margin: EdgeInsets.all(10),
             child: PageView(
               children: [
