@@ -10,7 +10,7 @@ import 'package:katec/view/InputView/vhl_form.dart';
 import 'package:katec/view/categoView/camion_view.dart';
 import 'package:katec/view/categoView/voiture_view.dart';
 import 'package:katec/view/parametre_view.dart';
-import 'package:katec/view/vhl_view.dart';
+import 'package:katec/view/vhl_view/vhl_view.dart';
 
 void main() {
   print("بسم الله");
