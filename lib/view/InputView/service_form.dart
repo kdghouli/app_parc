@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:katec/helpers/sqldb.dart';
+import 'package:app_parc/helpers/sqldb.dart';
 
 class ServiceForm extends StatefulWidget {
   const ServiceForm({super.key});

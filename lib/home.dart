@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:katec/helpers/sqldb.dart';
-import 'package:katec/widget/icons_parc.dart';
+import 'package:app_parc/helpers/sqldb.dart';
+import 'package:app_parc/widget/icons_parc.dart';
 
 // ignore: must_be_immutable
 class Home extends StatelessWidget {

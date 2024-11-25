@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:katec/home.dart';
-import 'package:katec/view/InputView/agence_form.dart';
-import 'package:katec/view/InputView/category_form.dart';
-import 'package:katec/view/InputView/intitule_form.dart';
-import 'package:katec/view/InputView/service_form.dart';
-import 'package:katec/view/InputView/status_form.dart';
-import 'package:katec/view/InputView/vhl_form.dart';
-import 'package:katec/view/categoView/camion_view.dart';
-import 'package:katec/view/categoView/voiture_view.dart';
-import 'package:katec/view/parametre_view.dart';
-import 'package:katec/view/vhl_view/vhl_view.dart';
+import 'package:app_parc/home.dart';
+import 'package:app_parc/view/InputView/agence_form.dart';
+import 'package:app_parc/view/InputView/category_form.dart';
+import 'package:app_parc/view/InputView/intitule_form.dart';
+import 'package:app_parc/view/InputView/service_form.dart';
+import 'package:app_parc/view/InputView/status_form.dart';
+import 'package:app_parc/view/InputView/vhl_form.dart';
+import 'package:app_parc/view/categoView/camion_view.dart';
+import 'package:app_parc/view/categoView/voiture_view.dart';
+import 'package:app_parc/view/parametre_view.dart';
+import 'package:app_parc/view/vhl_view/vhl_view.dart';
 
 void main() {
   print("بسم الله");

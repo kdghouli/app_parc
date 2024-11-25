@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
-import 'package:katec/view/vhl_view/vhl_view_donnee.dart';
-import 'package:katec/view/vhl_view/vhl_view_historique.dart';
-import 'package:katec/view/vhl_view/vhl_view_papier.dart';
+import 'package:app_parc/view/vhl_view/vhl_view_donnee.dart';
+import 'package:app_parc/view/vhl_view/vhl_view_historique.dart';
+import 'package:app_parc/view/vhl_view/vhl_view_papier.dart';
 
 class VhlView extends StatefulWidget {
   const VhlView({super.key});

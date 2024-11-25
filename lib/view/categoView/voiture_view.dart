@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:katec/controllers/getx_controller.dart';
+import 'package:app_parc/controllers/getx_controller.dart';
 
 class VoitureView extends StatefulWidget {
   const VoitureView({super.key});

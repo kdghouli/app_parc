@@ -11,7 +11,7 @@ class CasierCustum extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(1),
+      margin: EdgeInsets.all(2),
       padding: EdgeInsets.all(6),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(3.5),
@@ -20,8 +20,8 @@ class CasierCustum extends StatelessWidget {
                 offset: Offset(1.2, 1.2), color: Colors.grey, blurRadius: 1.0)
           ],
           gradient: LinearGradient(colors: [
-            const Color.fromARGB(255, 163, 223, 217),
-            const Color.fromARGB(255, 111, 243, 230),
+            Color.fromARGB(255, 250, 250, 250),
+            Color.fromARGB(255, 192, 189, 189),
           ])),
       child: Row(
         children: [

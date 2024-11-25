@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:katec/helpers/sqldb.dart';
-import 'package:katec/widget/casier_custum.dart';
+import 'package:app_parc/helpers/sqldb.dart';
+import 'package:app_parc/widget/casier_custum.dart';
 
 class VhlViewDonnee extends StatefulWidget {
   const VhlViewDonnee({super.key});
@@ -23,6 +23,41 @@ class _VhlViewDonneeState extends State<VhlViewDonnee> {
         CasierCustum(nameCase: "Affectation :", nameCaseBase: "Affectation"),
         CasierCustum(nameCase: "Chassis :", nameCaseBase: "chassis"),
         CasierCustum(nameCase: "Intitule :", nameCaseBase: "Intitule"),
+        Container(
+            height: 300,
+            margin: EdgeInsets.all(10),
+            child: PageView(
+              children: [
+                Image.asset(
+                  "assets/images/a.jpeg",
+                  fit: BoxFit.contain,
+                ),
+                Image.asset(
+                  "assets/images/aa.jpeg",
+                  fit: BoxFit.contain,
+                ),
+                Image.asset(
+                  "assets/images/b.jpeg",
+                  fit: BoxFit.contain,
+                ),
+                Image.asset(
+                  "assets/images/d.jpeg",
+                  fit: BoxFit.contain,
+                ),
+                Image.asset(
+                  "assets/images/h.png",
+                  fit: BoxFit.contain,
+                ),
+                Image.asset(
+                  "assets/images/k.jpeg",
+                  fit: BoxFit.contain,
+                ),
+                Image.asset(
+                  "assets/images/logo.png",
+                  fit: BoxFit.contain,
+                ),
+              ],
+            )),
       ])
     ]);
   }

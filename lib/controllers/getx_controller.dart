@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:katec/helpers/sqldb.dart';
+import 'package:app_parc/helpers/sqldb.dart';
 
 class TestGetxController extends GetxController {
   SqlDb sqlDb = SqlDb();

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:katec/helpers/sqldb.dart';
+import 'package:app_parc/helpers/sqldb.dart';
 
 class DropdownButtonExample extends StatefulWidget {
   const DropdownButtonExample({super.key});
