@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => Home(),
         "camionview": (context) => const CamionView(),
-        "voitureview": (context) => const VoitureView(),
+        "voitureview": (context) => VoitureView(),
         "parametreview": (context) => const ParametreView(),
         "serviceform": (context) => const ServiceForm(),
         "agenceform": (context) => const AgenceForm(),

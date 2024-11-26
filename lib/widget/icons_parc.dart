@@ -1,3 +1,4 @@
+import 'package:app_parc/controllers/getx_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -5,9 +6,16 @@ class IconsParc extends StatelessWidget {
   final String? textIco;
   final Icon ikon;
   final String? page;
+  final int nn;
 
-  const IconsParc(
-      {super.key, required this.textIco, required this.ikon, this.page});
+  IconsParc(
+      {super.key,
+      required this.textIco,
+      required this.ikon,
+      this.page,
+      required this.nn});
+
+  TestGetxController ctrl = Get.put(TestGetxController(), permanent: false);
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +23,7 @@ class IconsParc extends StatelessWidget {
       IconButton(
         onPressed: () {
           Get.toNamed("$page");
+          ctrl.getVhlsCategorie(nn);
         },
         icon: ikon,
         iconSize: 82.00,

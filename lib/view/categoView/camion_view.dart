@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/route_manager.dart';
 import 'package:app_parc/controllers/getx_controller.dart';
 
 class CamionView extends StatefulWidget {
@@ -10,30 +9,32 @@ class CamionView extends StatefulWidget {
   State<CamionView> createState() => _CamionViewState();
 }
 
-TestGetxController controller = Get.put(TestGetxController());
+final controller = Get.put(TestGetxController(), permanent: false);
 
 class _CamionViewState extends State<CamionView> {
   @override
   void initState() {
     super.initState();
-    controller.getVhlsCategorie(1);
+    controller.data = [];
+    // controller.getVhlsCategorie(1);
   }
 
   @override
   Widget build(BuildContext context) {
     var borderRadius = const BorderRadius.only(
-        topRight: Radius.circular(3), bottomRight: Radius.circular(3));
+        topRight: Radius.circular(2), bottomRight: Radius.circular(2));
     return Scaffold(
         appBar: AppBar(
           title: const Text("Liste des camions"),
           backgroundColor: Colors.grey,
         ),
         body: GetBuilder<TestGetxController>(
+          init: TestGetxController(),
           builder: (controller) => SingleChildScrollView(
               child: Column(children: [
             ListView.builder(
                 physics: PageScrollPhysics(),
-                padding: const EdgeInsets.all(3),
+                padding: const EdgeInsets.all(2),
                 shrinkWrap: true,
                 itemCount: controller.data.length,
                 itemBuilder: (context, i) {

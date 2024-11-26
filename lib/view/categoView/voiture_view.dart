@@ -2,24 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:app_parc/controllers/getx_controller.dart';
 
-class VoitureView extends StatefulWidget {
-  const VoitureView({super.key});
+class VoitureView extends StatelessWidget {
+  VoitureView({super.key});
 
-  @override
-  State<VoitureView> createState() => _VoitureViewState();
-}
-
-final controller = Get.put(TestGetxController());
-
-class _VoitureViewState extends State<VoitureView> {
-  @override
-  void initState() {
-    super.initState();
-    controller.getVhlsCategorie(2);
-  }
+  final controller = Get.put(TestGetxController(),permanent: false);
 
   @override
   Widget build(BuildContext context) {
+    controller.data = [];
     var borderRadius = const BorderRadius.only(
         topRight: Radius.circular(3), bottomRight: Radius.circular(3));
     return Scaffold(
@@ -28,9 +18,7 @@ class _VoitureViewState extends State<VoitureView> {
           backgroundColor: Colors.grey,
         ),
         body: GetBuilder<TestGetxController>(
-          builder: (controller) => SingleChildScrollView(
-              child: Column(children: [
-            ListView.builder(
+            builder: (controller) => ListView.builder(
                 physics: PageScrollPhysics(),
                 padding: const EdgeInsets.all(3),
                 shrinkWrap: true,
@@ -48,7 +36,7 @@ class _VoitureViewState extends State<VoitureView> {
                       dense: true,
                       title: Text("${controller.data[i]['matricule']}"),
                       subtitle: Text(
-                          "${controller.data[i]['marque']}-${controller.data[i]['id']}"),
+                          "${controller.data[i]['marque']}-${controller.data[i]['Intitule']}"),
                       trailing: Text(
                         "${controller.data[i]['Affectation']}",
                         style: TextStyle(fontSize: 11),
@@ -58,8 +46,6 @@ class _VoitureViewState extends State<VoitureView> {
                       },
                     ),
                   );
-                })
-          ])),
-        ));
+                })));
   }
 }

@@ -18,7 +18,7 @@ class _ParametreViewState extends State<ParametreView> {
           actions: [
             IconButton(
                 onPressed: () {
-                  Get.offAllNamed("/");
+                  Get.toNamed("/");
                 },
                 icon: const Icon(
                   Icons.home_outlined,

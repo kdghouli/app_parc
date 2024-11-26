@@ -33,7 +33,7 @@ ON vhls.intitule_id=intitules.id AND vhls.categorie_id=categories.id AND agences
 ORDER BY Affectation
 
 ''');
-    print(response);
+    print("getVhlsComplet");
     data.addAll(response);
     update();
     return response;
@@ -64,6 +64,7 @@ GROUP BY nomCategorie
 ORDER BY categories.id ''');
     print(response);
     data.addAll(response);
+    update();
     return response;
   }
 }
