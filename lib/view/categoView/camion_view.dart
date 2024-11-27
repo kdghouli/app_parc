@@ -2,22 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:app_parc/controllers/getx_controller.dart';
 
-class CamionView extends StatefulWidget {
-  const CamionView({super.key});
+class CamionView extends StatelessWidget {
+  CamionView({super.key});
 
-  @override
-  State<CamionView> createState() => _CamionViewState();
-}
-
-final controller = Get.put(TestGetxController(), permanent: false);
-
-class _CamionViewState extends State<CamionView> {
-  @override
-  void initState() {
-    super.initState();
-    controller.data = [];
-    // controller.getVhlsCategorie(1);
-  }
+  final controller = Get.put(TestGetxController());
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +24,7 @@ class _CamionViewState extends State<CamionView> {
                 physics: PageScrollPhysics(),
                 padding: const EdgeInsets.all(2),
                 shrinkWrap: true,
-                itemCount: controller.data.length,
+                itemCount: controller.response.length,
                 itemBuilder: (context, i) {
                   return Card(
                     margin: EdgeInsets.all(2),
@@ -48,15 +36,16 @@ class _CamionViewState extends State<CamionView> {
                         size: 26,
                       ),
                       dense: true,
-                      title: Text("${controller.data[i]['matricule']}"),
+                      title: Text("${controller.response[i]['matricule']}"),
                       subtitle: Text(
-                          "${controller.data[i]['marque']}-${controller.data[i]['Intitule']}"),
+                          "${controller.response[i]['marque']}-${controller.response[i]['Intitule']}"),
                       trailing: Text(
-                        "${controller.data[i]['Affectation']}",
+                        "${controller.response[i]['Affectation']}",
                         style: TextStyle(fontSize: 11),
                       ),
                       onTap: () => {
-                        Get.toNamed("vhlview", arguments: [controller.data[i]]),
+                        Get.toNamed("vhlview",
+                            arguments: [controller.response[i]]),
                       },
                     ),
                   );

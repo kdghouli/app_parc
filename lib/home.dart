@@ -1,7 +1,12 @@
+import 'package:app_parc/view/categoView/camion_view.dart';
+import 'package:app_parc/view/categoView/voiture_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:app_parc/helpers/sqldb.dart';
 import 'package:app_parc/widget/icons_parc.dart';
+
+import 'view/categoView/chariots_view.dart';
+import 'view/categoView/scooters_view.dart';
 
 // ignore: must_be_immutable
 class Home extends StatelessWidget {
@@ -37,13 +42,13 @@ class Home extends StatelessWidget {
                 IconsParc(
                   textIco: "Distribution",
                   ikon: Icon(Icons.local_shipping),
-                  page: "camionview",
+                  page: CamionView(),
                   nn: 1,
                 ),
                 IconsParc(
                   textIco: "Voiture",
                   ikon: Icon(Icons.directions_car),
-                  page: "voitureview",
+                  page: VoitureView(),
                   nn: 2,
                 )
               ])),
@@ -54,14 +59,14 @@ class Home extends StatelessWidget {
                 IconsParc(
                   textIco: "Chariots",
                   ikon: Icon(Icons.forklift),
-                  page: "camionview",
-                  nn: 1,
+                  page: ChariotsView(),
+                  nn: 4,
                 ),
                 IconsParc(
                   textIco: "Scooter",
                   ikon: Icon(Icons.delivery_dining),
-                  page: "camionview",
-                  nn: 1,
+                  page: ScootersView(),
+                  nn: 3,
                 )
               ])),
           Expanded(
@@ -71,13 +76,13 @@ class Home extends StatelessWidget {
                 IconsParc(
                   textIco: "Users",
                   ikon: Icon(Icons.admin_panel_settings),
-                  page: "camionview",
+                  page: CamionView(),
                   nn: 1,
                 ),
                 IconsParc(
                   textIco: "Table de bord",
                   ikon: Icon(Icons.dashboard),
-                  page: "camionview",
+                  page: CamionView(),
                   nn: 1,
                 )
               ])),

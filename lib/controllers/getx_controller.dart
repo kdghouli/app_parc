@@ -4,7 +4,7 @@ import 'package:app_parc/helpers/sqldb.dart';
 class TestGetxController extends GetxController {
   SqlDb sqlDb = SqlDb();
 
-  List data = [];
+  List response = [];
 
   @override
   void onInit() {
@@ -25,7 +25,7 @@ class TestGetxController extends GetxController {
   // }
 
   Future<List> getVhlsComplet() async {
-    List response = await sqlDb.readData('''
+    response = await sqlDb.readData('''
 SELECT matricule,marque,vhls.id,categorie_id,nomIntitule AS Intitule ,nomCategorie AS Catègorie,nomAgence AS Affectation,nomService AS Service
 FROM vhls 
 JOIN intitules,categories,agences,services
@@ -34,13 +34,13 @@ ORDER BY Affectation
 
 ''');
     print("getVhlsComplet");
-    data.addAll(response);
+    //data.addAll(response);
     update();
     return response;
   }
 
   Future<List> getVhlsCategorie(int idCatego) async {
-    List response = await sqlDb.readData('''
+    response = await sqlDb.readData('''
 SELECT matricule,marque,chassis,categorie_id,nomIntitule AS Intitule ,nomCategorie AS Catègorie,nomAgence AS Affectation,nomService AS Service
 FROM vhls
 JOIN intitules,categories,agences,services
@@ -48,11 +48,15 @@ ON vhls.intitule_id=intitules.id AND vhls.categorie_id=categories.id AND agences
 WHERE  categorie_id =$idCatego
 ORDER BY Affectation ''');
 
-    print(response);
-    data.addAll(response);
+    //print(response);
+    //data.addAll(response);
     update();
     return response;
   }
+
+
+
+  
 
   Future<List> getRecapCatego() async {
     List response = await sqlDb.readData(
@@ -63,7 +67,7 @@ ON vhls.categorie_id=categories.id
 GROUP BY nomCategorie
 ORDER BY categories.id ''');
     print(response);
-    data.addAll(response);
+    //data.addAll(response);
     update();
     return response;
   }

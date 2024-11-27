@@ -5,11 +5,10 @@ import 'package:app_parc/controllers/getx_controller.dart';
 class VoitureView extends StatelessWidget {
   VoitureView({super.key});
 
-  final controller = Get.put(TestGetxController(),permanent: false);
+  final controller = Get.put(TestGetxController());
 
   @override
   Widget build(BuildContext context) {
-    controller.data = [];
     var borderRadius = const BorderRadius.only(
         topRight: Radius.circular(3), bottomRight: Radius.circular(3));
     return Scaffold(
@@ -22,7 +21,7 @@ class VoitureView extends StatelessWidget {
                 physics: PageScrollPhysics(),
                 padding: const EdgeInsets.all(3),
                 shrinkWrap: true,
-                itemCount: controller.data.length,
+                itemCount: controller.response.length,
                 itemBuilder: (context, i) {
                   return Card(
                     margin: EdgeInsets.all(2),
@@ -34,15 +33,16 @@ class VoitureView extends StatelessWidget {
                         size: 26,
                       ),
                       dense: true,
-                      title: Text("${controller.data[i]['matricule']}"),
+                      title: Text("${controller.response[i]['matricule']}"),
                       subtitle: Text(
-                          "${controller.data[i]['marque']}-${controller.data[i]['Intitule']}"),
+                          "${controller.response[i]['marque']}-${controller.response[i]['Intitule']}"),
                       trailing: Text(
-                        "${controller.data[i]['Affectation']}",
+                        "${controller.response[i]['Affectation']}",
                         style: TextStyle(fontSize: 11),
                       ),
                       onTap: () => {
-                        Get.toNamed("vhlview", arguments: [controller.data[i]]),
+                        Get.toNamed("vhlview",
+                            arguments: [controller.response[i]]),
                       },
                     ),
                   );

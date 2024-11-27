@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       color: Colors.amber,
       routes: {
         "/": (context) => Home(),
-        "camionview": (context) => const CamionView(),
+        "camionview": (context) => CamionView(),
         "voitureview": (context) => VoitureView(),
         "parametreview": (context) => const ParametreView(),
         "serviceform": (context) => const ServiceForm(),

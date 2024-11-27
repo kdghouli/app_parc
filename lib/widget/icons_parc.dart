@@ -5,24 +5,24 @@ import 'package:get/get.dart';
 class IconsParc extends StatelessWidget {
   final String? textIco;
   final Icon ikon;
-  final String? page;
+  final Widget page;
   final int nn;
 
   IconsParc(
       {super.key,
       required this.textIco,
       required this.ikon,
-      this.page,
+      required this.page,
       required this.nn});
 
-  TestGetxController ctrl = Get.put(TestGetxController(), permanent: false);
+  TestGetxController ctrl = Get.put(TestGetxController());
 
   @override
   Widget build(BuildContext context) {
     return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
       IconButton(
         onPressed: () {
-          Get.toNamed("$page");
+          Get.to(() => page);
           ctrl.getVhlsCategorie(nn);
         },
         icon: ikon,
