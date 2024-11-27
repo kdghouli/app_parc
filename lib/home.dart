@@ -1,3 +1,4 @@
+import 'package:app_parc/Testo/data_table_view.dart';
 import 'package:app_parc/view/categoView/camion_view.dart';
 import 'package:app_parc/view/categoView/voiture_view.dart';
 import 'package:flutter/material.dart';
@@ -82,7 +83,7 @@ class Home extends StatelessWidget {
                 IconsParc(
                   textIco: "Table de bord",
                   ikon: Icon(Icons.dashboard),
-                  page: CamionView(),
+                  page: DataTableView(),
                   nn: 1,
                 )
               ])),

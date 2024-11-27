@@ -54,13 +54,9 @@ ORDER BY Affectation ''');
     return response;
   }
 
-
-
-  
-
   Future<List> getRecapCatego() async {
     List response = await sqlDb.readData(
-        '''SELECT categories.id,categories.nomCategorie ,count(vhls.matricule) AS Nb
+        '''SELECT categories.id,categories.nomCategorie as Catégorie ,count(vhls.matricule) AS Nb
 FROM categories
 JOIN vhls
 ON vhls.categorie_id=categories.id
