@@ -9,11 +9,9 @@ class ChariotsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var borderRadius = const BorderRadius.only(
-        topRight: Radius.circular(3), bottomRight: Radius.circular(3));
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Liste des voitures"),
+          title: const Text("Liste des Chariots"),
           backgroundColor: Colors.grey,
         ),
         body: GetBuilder<TestGetxController>(
@@ -24,18 +22,22 @@ class ChariotsView extends StatelessWidget {
                 itemCount: controller.response.length,
                 itemBuilder: (context, i) {
                   return Card(
-                    margin: EdgeInsets.all(2),
+                    color: Colors.orange[100],
+                    elevation: 2,
+                    margin: EdgeInsets.all(3),
                     child: ListTile(
-                      shape: RoundedRectangleBorder(borderRadius: borderRadius),
                       leading: const Icon(
-                        Icons.directions_car,
+                        Icons.forklift,
                         color: Colors.redAccent,
                         size: 26,
                       ),
                       dense: true,
-                      title: Text("${controller.response[i]['matricule']}"),
-                      subtitle: Text(
-                          "${controller.response[i]['marque']}-${controller.response[i]['Intitule']}"),
+                      title: Text(
+                        "${controller.response[i]['matricule']}",
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w600),
+                      ),
+                      subtitle: Text("${controller.response[i]['marque']}"),
                       trailing: Text(
                         "${controller.response[i]['Affectation']}",
                         style: TextStyle(fontSize: 11),
