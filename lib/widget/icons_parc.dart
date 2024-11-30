@@ -19,20 +19,28 @@ class IconsParc extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-      IconButton(
-        onPressed: () {
-          Get.to(() => page);
-          ctrl.getVhlsCategorie(nn);
-        },
-        icon: ikon,
-        iconSize: 82.00,
+    return Container(
+      margin: EdgeInsets.all(10),
+      padding: EdgeInsets.symmetric(horizontal: 13),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15.0),
+        color: Colors.cyan[200],
       ),
-      Text(
-        "$textIco",
-        style: const TextStyle(
-            color: Colors.black, fontSize: 14, fontWeight: FontWeight.bold),
-      )
-    ]);
+      //
+      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        IconButton(
+          onPressed: () {
+            Get.to(() => page);
+            ctrl.getVhlsCategorie(nn);
+          },
+          icon: ikon,
+          iconSize: 76.00,
+        ),
+        Text(
+          "$textIco",
+          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+        )
+      ]),
+    );
   }
 }

@@ -7,8 +7,8 @@ import 'package:app_parc/view/InputView/intitule_form.dart';
 import 'package:app_parc/view/InputView/service_form.dart';
 import 'package:app_parc/view/InputView/status_form.dart';
 import 'package:app_parc/view/InputView/vhl_form.dart';
-import 'package:app_parc/view/categoView/camion_view.dart';
-import 'package:app_parc/view/categoView/voiture_view.dart';
+import 'package:app_parc/view/camions/camion_view.dart';
+import 'package:app_parc/view/voitures/voiture_view.dart';
 import 'package:app_parc/view/parametre_view.dart';
 import 'package:app_parc/view/vhl_view/vhl_view.dart';
 
@@ -25,8 +25,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       theme: ThemeData(useMaterial3: true),
-      debugShowCheckedModeBanner: false,
-      color: Colors.amber,
+      debugShowCheckedModeBanner: true,
+      color: const Color.fromARGB(255, 92, 72, 11),
       routes: {
         "/": (context) => Home(),
         "camionview": (context) => CamionView(),

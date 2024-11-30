@@ -1,13 +1,13 @@
 import 'package:app_parc/Testo/data_table_view.dart';
-import 'package:app_parc/view/categoView/camion_view.dart';
-import 'package:app_parc/view/categoView/voiture_view.dart';
+import 'package:app_parc/view/camions/camion_view.dart';
+import 'package:app_parc/view/voitures/voiture_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:app_parc/helpers/sqldb.dart';
 import 'package:app_parc/widget/icons_parc.dart';
 
-import 'view/categoView/chariots_view.dart';
-import 'view/categoView/scooters_view.dart';
+import 'view/chariots/chariots_view.dart';
+import 'view/scooters/scooters_view.dart';
 
 // ignore: must_be_immutable
 class Home extends StatelessWidget {
@@ -18,8 +18,8 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home page"),
-        backgroundColor: Colors.yellowAccent,
+        title: const Text("Parc Auto"),
+        backgroundColor: Colors.grey[400],
         actions: [
           IconButton(
               onPressed: () {
@@ -34,7 +34,7 @@ class Home extends StatelessWidget {
       backgroundColor: Colors.teal,
       body: Container(
         padding: const EdgeInsets.all(20),
-        color: Colors.amber[200],
+        color: Colors.grey[300],
         child: Column(children: [
           Expanded(
               child: Row(
