@@ -23,11 +23,19 @@ class Home extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {
+                Get.toNamed("search");
+              },
+              icon: const Icon(
+                Icons.search_outlined,
+                size: 30,
+              )),
+          IconButton(
+              onPressed: () {
                 Get.toNamed("parametreview");
               },
               icon: const Icon(
                 Icons.settings,
-                size: 30,
+                size: 32,
               ))
         ],
       ),
