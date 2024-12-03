@@ -57,7 +57,7 @@ class CustomSearchDelegate extends SearchDelegate<String> {
   @override
   Widget buildSuggestions(BuildContext context) {
     getVhlBase();
-
+    print(searchList);
     final List suggestionList = query.isEmpty
         ? []
         : searchList
@@ -68,6 +68,12 @@ class CustomSearchDelegate extends SearchDelegate<String> {
       itemCount: suggestionList.length,
       itemBuilder: (context, index) {
         return ListTile(
+          leading:
+              Icon(
+                  Icons.local_shipping,
+                  color: Colors.redAccent,
+                  size: 26,
+                ),
           title: Text(suggestionList[index]['matricule']),
           onTap: () {
             Get.toNamed("vhlview", arguments: [suggestionList[index]]);
