@@ -1,4 +1,5 @@
 import 'package:app_parc/Testo/search_vhl.dart';
+import 'package:app_parc/Testo/search_vhl_old.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:app_parc/home.dart';
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
         "statusform": (context) => const StatusForm(),
         "vhlform": (context) => const VhlForm(),
         "vhlview": (context) => const VhlView(),
-        "search": (context) => const SearchVhl()
+        "search": (context) => const SearchVhl(),
       },
     );
   }

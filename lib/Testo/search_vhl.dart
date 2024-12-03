@@ -1,6 +1,5 @@
-import 'package:app_parc/helpers/sqldb.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:flutter/widgets.dart';
 
 class SearchVhl extends StatefulWidget {
   const SearchVhl({super.key});
@@ -9,83 +8,108 @@ class SearchVhl extends StatefulWidget {
   State<SearchVhl> createState() => _SearchVhlState();
 }
 
-SqlDb sqlDb = SqlDb();
-List data = [];
-
-Future getVhlBase() async {
-  List response = await sqlDb.read("vhls");
-
-  return data.addAll(response);
-}
-
 class _SearchVhlState extends State<SearchVhl> {
-  @override
-  void initState() {
-    getVhlBase();
-    print(data);
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Chercher véhicule"),
-          backgroundColor: Colors.grey[400],
-          actions: [
-            IconButton(
-                onPressed: () {
-                  Get.toNamed("parametreview");
-                },
-                icon: const Icon(
-                  Icons.settings,
-                  size: 32,
-                ))
-          ],
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: SearchAnchor(
-              builder: (BuildContext context, SearchController controller) {
-            return SearchBar(
-              controller: controller,
-              padding: const WidgetStatePropertyAll<EdgeInsets>(
-                  EdgeInsets.symmetric(horizontal: 10.0)),
-              onTap: () {
-                controller.openView();
-              },
-              onChanged: (_) {
-                controller.openView();
-                print(controller.value);
-                data.where((val) => data.contains(controller.value == val));
-              },
-              leading: const Icon(Icons.search),
-              trailing: <Widget>[
-                Tooltip(
-                  message: 'Change brightness mode',
-                  child: IconButton(
-                    onPressed: () {
-                      setState(() {});
-                    },
-                    icon: const Icon(Icons.wb_sunny_outlined),
-                    selectedIcon: const Icon(Icons.brightness_2_outlined),
-                  ),
-                )
-              ],
+      appBar: AppBar(title: const Text('Flutter Search')),
+      floatingActionButton: Builder(
+        builder: (context) => FloatingActionButton(
+          child: const Icon(Icons.search),
+          onPressed: () async {
+            await showSearch(
+              context: context,
+              delegate: CustomSearchDelegate(),
             );
-          }, suggestionsBuilder:
-                  (BuildContext context, SearchController controller) {
-            return List<ListTile>.generate(data.length, (int i) {
-              return ListTile(
-                title: Text(
-                    '${data[i]["matricule"]} - - - - >  ${data[i]["marque"]}'),
-                onTap: () {
-                  setState(() {
-                    Get.toNamed("vhlview", arguments: [data[i]]);
-                  });
-                },
-              );
-            });
-          }),
-        ));
+          },
+        ),
+      ),
+    );
   }
+}
+
+class CustomSearchDelegate extends SearchDelegate<String> {
+  // Dummy list
+  final List<String> searchList = [
+    "Apple",
+    "Banana",
+    "Cherry",
+    "Date",
+    "Fig",
+    "Grapes",
+    "Kiwi",
+    "Lemon",
+    "Mango",
+    "Orange",
+    "Papaya",
+    "Raspberry",
+    "Strawberry",
+    "Tomato",
+    "Watermelon",
+  ];
+
+  @override
+  List<Widget>? buildActions(BuildContext context) {
+    return [
+      IconButton(
+        icon: Icon(Icons.clear),
+        onPressed: () {
+          query = '';
+          // When pressed here the query will be cleared from the search bar.
+        },
+      ),
+    ];
+  }
+
+  @override
+  Widget? buildLeading(BuildContext context) {
+    return IconButton(
+      icon: const Icon(Icons.arrow_back),
+      onPressed: () => Navigator.of(context).pop(),
+      // Exit from the search screen.
+    );
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    final List<String> searchResults = searchList
+        .where((item) => item.toLowerCase().contains(query.toLowerCase()))
+        .toList();
+    return ListView.builder(
+      itemCount: searchResults.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text(searchResults[index]),
+          onTap: () {
+            // Handle the selected search result.
+            close(context, searchResults[index]);
+          },
+        );
+      },
+    );
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    final List<String> suggestionList = query.isEmpty
+        ? []
+        : searchList
+            .where((item) => item.toLowerCase().contains(query.toLowerCase()))
+            .toList();
+
+    return ListView.builder(
+      itemCount: suggestionList.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text(suggestionList[index]),
+          onTap: () {
+            query = suggestionList[index];
+            // Show the search results based on the selected suggestion.
+          },
+        );
+      },
+    );
+  }
+
+  // These methods are mandatory you cannot skip them.
 }

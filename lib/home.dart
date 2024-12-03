@@ -1,4 +1,5 @@
 import 'package:app_parc/Testo/data_table_view.dart';
+import 'package:app_parc/controllers/custom_search_delegate.dart';
 import 'package:app_parc/view/camions/camion_view.dart';
 import 'package:app_parc/view/voitures/voiture_view.dart';
 import 'package:flutter/material.dart';
@@ -22,8 +23,11 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.grey[400],
         actions: [
           IconButton(
-              onPressed: () {
-                Get.toNamed("search");
+              onPressed: () async {
+                await showSearch(
+                  context: context,
+                  delegate: CustomSearchDelegate(),
+                );
               },
               icon: const Icon(
                 Icons.search_outlined,

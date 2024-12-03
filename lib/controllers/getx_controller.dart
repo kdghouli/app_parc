@@ -67,4 +67,13 @@ ORDER BY categories.id ''');
     update();
     return response;
   }
+
+
+//   void filterTreeTypes(searchString) {
+//     List<TreeType> treeList = [];
+
+//   List treeTypeList.value = treeList.where((element) =>
+//         element.name.toLowerCase().contains(searchString.toLowerCase())).toList();
+// }
+
 }
