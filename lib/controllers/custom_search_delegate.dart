@@ -9,8 +9,8 @@ class CustomSearchDelegate extends SearchDelegate<String> {
   SqlDb sqlDb = SqlDb();
 
   Future getVhlBase() async {
-    List response = await sqlDb.read("vhls");
-    return searchList.addAll(response);
+    searchList = await sqlDb.read("vhls");
+    return searchList;
   }
 
   @override
