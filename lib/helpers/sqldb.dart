@@ -118,6 +118,33 @@ CREATE TABLE `vhls`  (
  
 
     ''');
+
+    batch.execute('''
+
+
+CREATE TABLE `commentaires`  (
+  `id` INTEGER PRIMARY KEY AUTOINCREMENT,
+
+  `comment` TEXT NOT NULL,
+  `status_id` INTEGER UNSIGNED ,
+  `vhl_id` INTEGER UNSIGNED ,
+  `par` TEXT ,
+  `date_comment` TEXT ,
+  `isAlert` INTEGER ,
+  `created_at` TEXT DEFAULT NULL,
+  `updated_at` TEXT DEFAULT NULL, 
+  FOREIGN KEY(status_id) REFERENCES status(id),
+  FOREIGN KEY(vhl_id) REFERENCES vhls(id),
+
+) ;
+
+
+
+
+ 
+
+    ''');
+
     batch.insert("agences",
         {'nomAgence': 'Marrakech', 'site': 'CBGS', 'division': 'M210'});
     batch.insert("agences",

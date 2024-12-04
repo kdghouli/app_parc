@@ -101,13 +101,18 @@ class _ParametreViewState extends State<ParametreView> {
                           fontWeight: FontWeight.bold,
                           color: Colors.white)),
                 ),
+                TextButton(
+                  onPressed: () {
+                    Get.toNamed("commentform");
+                  },
+                  child: const Text("Commentaires",
+                      style: TextStyle(
+                          fontSize: 22,
+                          backgroundColor: Color.fromARGB(255, 150, 54, 167),
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white)),
+                ),
                 const Text("Utilisateur",
-                    style: TextStyle(
-                        fontSize: 22,
-                        backgroundColor: Color.fromARGB(255, 150, 54, 167),
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white)),
-                const Text("Commentaires",
                     style: TextStyle(
                         fontSize: 22,
                         backgroundColor: Color.fromARGB(255, 150, 54, 167),
