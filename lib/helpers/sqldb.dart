@@ -134,7 +134,7 @@ CREATE TABLE `commentaires`  (
   `created_at` TEXT DEFAULT NULL,
   `updated_at` TEXT DEFAULT NULL, 
   FOREIGN KEY(status_id) REFERENCES status(id),
-  FOREIGN KEY(vhl_id) REFERENCES vhls(id),
+  FOREIGN KEY(vhl_id) REFERENCES vhls(id)
 
 ) ;
 

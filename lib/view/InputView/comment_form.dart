@@ -20,13 +20,13 @@ class _CommentFormState extends State<CommentForm> {
 
   List data = [];
   List dataStatus = [];
+  List dataComment = [];
 
   var _dropdownvalueSt;
   var _dropdownvalueVhl;
 
   Future<List> getList() async {
     List response = await sqldb.read("vhls");
-    print(response);
     data.addAll(response);
     setState(() {});
     return response;
@@ -34,8 +34,15 @@ class _CommentFormState extends State<CommentForm> {
 
   getListStatus() async {
     List response = await sqldb.read("status");
-    print(response);
     dataStatus.addAll(response);
+    setState(() {});
+    return response;
+  }
+
+  getListComment() async {
+    List response = await sqldb.read("commentaires");
+    print(response);
+    dataComment.addAll(response);
     setState(() {});
     return response;
   }
@@ -45,6 +52,7 @@ class _CommentFormState extends State<CommentForm> {
     super.initState();
     getList();
     getListStatus();
+    getListComment();
   }
 
   @override
@@ -120,18 +128,31 @@ class _CommentFormState extends State<CommentForm> {
                 MaterialButton(
                   onPressed: () async {
                     int resp = await sqldb.insert("commentaires", {
-                      "commentaire": commentaire.text,
+                      "comment": commentaire.text,
                       "par": par.text,
-                      "date_comment": DateTime.now(),
+                      "date_comment": DateTime.timestamp().toString(),
                       "vhl_id": _dropdownvalueVhl.toString(),
                       "status_id": _dropdownvalueSt.toString(),
-                      "isAlert": 0
+                      "isAlert": isAlert.toString()
                     });
+                    Get.offAllNamed("parametreview");
                   },
                   color: const Color.fromARGB(225, 34, 139, 238),
                   textColor: Colors.white,
                   child: const Text("Save"),
                 ),
+                ListView(
+                  shrinkWrap: true,
+                  children: [
+                    ...List.generate(
+                      dataComment.length,
+                      (i) => Text(
+                        "${dataComment[i]['comment']}  - ${dataComment[i]['isAlert']} ",
+                        style: const TextStyle(fontSize: 14),
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),
