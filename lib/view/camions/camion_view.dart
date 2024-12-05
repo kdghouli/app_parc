@@ -38,7 +38,7 @@ class CamionView extends StatelessWidget {
                       dense: true,
                       title: Text("${controller.response[i]['matricule']}"),
                       subtitle: Text(
-                          "${controller.response[i]['marque']}-${controller.response[i]['Intitule']}"),
+                          "${controller.response[i]['marque']}---${controller.response[i]['Intitule']}"),
                       trailing: Text(
                         "${controller.response[i]['Affectation']}",
                         style: TextStyle(fontSize: 11),
