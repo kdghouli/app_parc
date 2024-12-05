@@ -13,6 +13,36 @@ class CustomSearchDelegate extends SearchDelegate<String> {
     return searchList;
   }
 
+  chooseIcon(val) {
+    switch (val) {
+      case 1:
+        return Icon(
+          Icons.local_shipping,
+          color: Colors.red,
+        );
+      case 2:
+        return Icon(
+          Icons.directions_car,
+          color: Colors.cyan,
+        );
+      case 4:
+        return Icon(
+          Icons.forklift,
+          color: Colors.orange,
+        );
+      case 3:
+        return Icon(
+          Icons.delivery_dining,
+          color: Colors.grey[600],
+        );
+      default:
+        return Icon(
+          Icons.hiking,
+          color: Colors.green,
+        );
+    }
+  }
+
   @override
   List<Widget>? buildActions(BuildContext context) {
     return [
@@ -43,6 +73,7 @@ class CustomSearchDelegate extends SearchDelegate<String> {
       itemCount: searchResults.length,
       itemBuilder: (context, index) {
         return ListTile(
+          leading: chooseIcon(searchResults[index]["categorie_id"]),
           title: Text(searchResults[index]["matricule"]),
           onTap: () {
             // Handle the selected search result.
@@ -68,12 +99,7 @@ class CustomSearchDelegate extends SearchDelegate<String> {
       itemCount: suggestionList.length,
       itemBuilder: (context, index) {
         return ListTile(
-          leading:
-              Icon(
-                  Icons.local_shipping,
-                  color: Colors.redAccent,
-                  size: 26,
-                ),
+          leading: chooseIcon(suggestionList[index]['categorie_id']),
           title: Text(suggestionList[index]['matricule']),
           onTap: () {
             Get.toNamed("vhlview", arguments: [suggestionList[index]]);

@@ -28,7 +28,7 @@ class ScootersView extends StatelessWidget {
                     child: ListTile(
                       shape: RoundedRectangleBorder(borderRadius: borderRadius),
                       leading: const Icon(
-                        Icons.directions_car,
+                        Icons.delivery_dining,
                         color: Colors.redAccent,
                         size: 26,
                       ),
