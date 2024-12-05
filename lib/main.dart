@@ -13,7 +13,7 @@ import 'package:app_parc/view/InputView/vhl_form.dart';
 import 'package:app_parc/view/camions/camion_view.dart';
 import 'package:app_parc/view/voitures/voiture_view.dart';
 import 'package:app_parc/view/parametre_view.dart';
-import 'package:app_parc/view/vhl_view/vhl_view.dart';
+import 'package:app_parc/view/vhl_pages/vhl_view.dart';
 
 void main() {
   print("بسم الله");
@@ -44,6 +44,7 @@ class MyApp extends StatelessWidget {
         "commentform": (context) => const CommentForm(),
         "vhlview": (context) => const VhlView(),
         "search": (context) => const SearchVhl(),
+        "addComment": (context) => const CommentForm()
       },
     );
   }

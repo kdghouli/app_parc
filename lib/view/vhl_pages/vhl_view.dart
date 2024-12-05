@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
-import 'package:app_parc/view/vhl_view/vhl_view_donnee.dart';
-import 'package:app_parc/view/vhl_view/vhl_view_historique.dart';
-import 'package:app_parc/view/vhl_view/vhl_view_papier.dart';
+import 'package:app_parc/view/vhl_pages/vhl_view_donnee.dart';
+import 'package:app_parc/view/vhl_pages/vhl_view_historique.dart';
+import 'package:app_parc/view/vhl_pages/vhl_view_papier.dart';
 
 class VhlView extends StatefulWidget {
   const VhlView({super.key});
@@ -41,22 +41,33 @@ class _VhlViewState extends State<VhlView> {
             });
           }),
       appBar: AppBar(
-          title: Text(
-            "${Get.arguments[0]['matricule']}",
-            style: TextStyle(
-                fontWeight: FontWeight.w900,
-                color: Colors.teal[800],
-                fontSize: 29,
-                letterSpacing: 4,
-                shadows: [
-                  Shadow(
-                      color: const Color.fromARGB(255, 250, 246, 246),
-                      offset: Offset(2, 1),
-                      blurRadius: 2)
-                ]),
-          ),
-          backgroundColor: Colors.grey[400],
-          shadowColor: Colors.tealAccent),
+        title: Text(
+          "${Get.arguments[0]['matricule']}",
+          style: TextStyle(
+              fontWeight: FontWeight.w900,
+              color: Colors.teal[800],
+              fontSize: 29,
+              letterSpacing: 4,
+              shadows: [
+                Shadow(
+                    color: const Color.fromARGB(255, 250, 246, 246),
+                    offset: Offset(2, 1),
+                    blurRadius: 2)
+              ]),
+        ),
+        backgroundColor: Colors.grey[400],
+        shadowColor: Colors.tealAccent,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Get.toNamed("addComment",arguments:Get.arguments[0]['matricule'] );
+            },
+            icon: Icon(Icons.speaker_notes),
+            iconSize: 24,
+            color: Colors.teal[800],
+          )
+        ],
+      ),
       body: _pageOptions[selectedPage],
     );
   }

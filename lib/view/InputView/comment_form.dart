@@ -112,6 +112,7 @@ class _CommentFormState extends State<CommentForm> {
                   },
                   value: _dropdownvalueSt,
                 ),
+                Text(Get.arguments != null ? "${Get.arguments}" : "-"),
                 CheckboxListTile(
                   title: Text("Alerte"),
                   controlAffinity: ListTileControlAffinity.platform,
