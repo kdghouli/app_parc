@@ -102,8 +102,8 @@ class CustomSearchDelegate extends SearchDelegate<String> {
           leading: chooseIcon(suggestionList[index]['categorie_id']),
           title: Text(suggestionList[index]['matricule']),
           onTap: () {
-            Get.toNamed("vhlview", arguments: [suggestionList[index]]);
             query = suggestionList[index]['matricule'];
+            Get.toNamed("vhlview", arguments: [suggestionList[index]]);
 
             // Show the search results based on the selected suggestion.
           },
