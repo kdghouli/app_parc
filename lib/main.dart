@@ -1,5 +1,6 @@
 import 'package:app_parc/Testo/search_vhl.dart';
 import 'package:app_parc/view/InputView/comment_form.dart';
+import 'package:app_parc/view/auth/signin_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:app_parc/home.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: true,
       color: const Color.fromARGB(255, 92, 72, 11),
       routes: {
-        "/": (context) => Home(),
+        "/": (context) => SignInView(),
         "camionview": (context) => CamionView(),
         "voitureview": (context) => VoitureView(),
         "parametreview": (context) => const ParametreView(),
