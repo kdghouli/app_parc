@@ -18,11 +18,10 @@ final userformData =
     FormData.fromMap({'email': 'khalid@gmail.com', 'password': '123456789'});
 
 Future getHttp() async {
-  final response = await dio.post('http://',
+  final response = await dio.post('http://192.168.1.107:80/api/login',
       data: userformData,
       options: Options(headers: {
-        "content-Type": "multipart/form-data",
-        "content-length": "44444444",
+        "Content-Type": "application/json",
         "Accept": "application/json"
       }));
   print(response);
