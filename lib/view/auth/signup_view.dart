@@ -89,6 +89,7 @@ class _SignUpViewState extends State<SignUpView> {
                             await saveUser();
 
                             print('Enregister');
+                            Get.back();
                           },
                           color: Colors.amber,
                           child: const Text("Enregister"),

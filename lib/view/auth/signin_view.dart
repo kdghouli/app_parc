@@ -1,3 +1,4 @@
+import 'package:app_parc/home_page.dart';
 import 'package:app_parc/view/auth/signup_view.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +51,7 @@ class _SignInViewState extends State<SignInView> {
               height: 130,
               child: Image.asset(
                 "assets/images/a.jpeg",
-                fit: BoxFit.contain,
+                fit: BoxFit.scaleDown,
               )),
           Container(
               padding: EdgeInsets.all(25),
@@ -82,8 +83,11 @@ class _SignInViewState extends State<SignInView> {
                         MaterialButton(
                           onPressed: () async {
                             await getHttp();
-
                             print('verified');
+                            await prefs?.setStringList(
+                                'userStock', ["$emailUser", "$passUser"]);
+                            print(prefs?.getStringList('userStock'));
+                            Get.to(HomePage());
                           },
                           color: Colors.amber,
                           child: const Text("Connecter"),
@@ -93,11 +97,11 @@ class _SignInViewState extends State<SignInView> {
                         ),
                         InkWell(
                           onTap: () {
-                            Get.to(SignUpView());
+                            Get.to(() => SignUpView());
                           },
                           child: Text("Enregistrer ..."),
                         ),
-                        //Text(prefs.get)
+                        //Text(prefs?.getStringList('userStock').toString())
                       ])))
         ]));
   }

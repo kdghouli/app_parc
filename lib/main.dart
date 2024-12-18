@@ -3,7 +3,7 @@ import 'package:app_parc/view/InputView/comment_form.dart';
 import 'package:app_parc/view/auth/signin_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:app_parc/home.dart';
+import 'package:app_parc/home_page.dart';
 import 'package:app_parc/view/InputView/agence_form.dart';
 import 'package:app_parc/view/InputView/category_form.dart';
 import 'package:app_parc/view/InputView/intitule_form.dart';

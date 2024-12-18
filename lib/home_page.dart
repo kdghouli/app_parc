@@ -11,8 +11,8 @@ import 'view/chariots/chariots_view.dart';
 import 'view/scooters/scooters_view.dart';
 
 // ignore: must_be_immutable
-class Home extends StatelessWidget {
-  Home({super.key});
+class HomePage extends StatelessWidget {
+  HomePage({super.key});
   SqlDb db = SqlDb();
 
   @override
