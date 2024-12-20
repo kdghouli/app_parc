@@ -37,7 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   get: ^4.6.6
   sqflite: ^2.4.0
-  http: 11.3.1
+  http: 1.2.2
   permission_handler: ^11.3.1
   path_provider: ^2.1.5
   dio: ^5.7.0

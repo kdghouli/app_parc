@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 class LoginScreen extends StatelessWidget {
   final LoginController loginController = Get.put(LoginController());
-  final TextEditingController usernameController = TextEditingController();
+  final TextEditingController mailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   @override
@@ -22,7 +22,7 @@ class LoginScreen extends StatelessWidget {
             ],
           ),
           body: Center(
-            child: Text('Welcome!'),
+            child: Text(loginController.storage.read('user').toString()),
           ),
         );
       } else {
@@ -35,15 +35,15 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               children: [
                 TextField(
-                  controller: usernameController,
-                  decoration: InputDecoration(labelText: 'Username'),
+                  controller: mailController,
+                  decoration: InputDecoration(labelText: 'Mail'),
                 ),
                 TextField(
                   controller: passwordController,
                   decoration: InputDecoration(labelText: 'Password'),
                   obscureText: true,
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 30),
                 Obx(() {
                   if (loginController.isLoading.value) {
                     return CircularProgressIndicator();
@@ -51,7 +51,7 @@ class LoginScreen extends StatelessWidget {
                     return ElevatedButton(
                       onPressed: () {
                         loginController.login(
-                          usernameController.text,
+                          mailController.text,
                           passwordController.text,
                         );
                       },

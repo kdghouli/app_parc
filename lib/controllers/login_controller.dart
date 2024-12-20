@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:dio/dio.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -18,19 +19,23 @@ class LoginController extends GetxController {
     isLoading.value = true;
     final response = await http.post(
       Uri.parse('http://192.168.1.107:80/api/login'),
-      body: jsonEncode({'mail': mail, 'password': password}),
+      body: jsonEncode({'email': mail, 'password': password}),
       headers: {'Content-Type': 'application/json'},
     );
     isLoading.value = false;
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
+      print(response.body);
       storage.write('loggedIn', true);
-      storage.write('token', data['token']);
+      storage.write('access_token', data['access_token']);
+      storage.write('token_type', data['token_type']);
+      storage.write('user', data['user']);
+
       isLoggedIn.value = true;
       Get.snackbar("Success", "Login successful");
     } else {
-      Get.snackbar("Error", "Invalid username or password");
+      Get.snackbar("Error", "Invalid Mail or Password");
     }
   }
 
