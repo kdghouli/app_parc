@@ -3,7 +3,7 @@ import 'package:app_parc/view/auth/signup_view.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:get_storage/get_storage.dart';
 
 class SignInView extends StatefulWidget {
   const SignInView({super.key});
@@ -23,10 +23,11 @@ FormData userformData =
     FormData.fromMap({'email': emailUser.text, 'password': passUser.text});
 
 class _SignInViewState extends State<SignInView> {
-  late SharedPreferences? prefs;
-
   Future getHttp() async {
-    prefs = await SharedPreferences.getInstance();
+    final box = GetStorage();
+    box.write('emailUser', emailUser.text.toString());
+    box.write('passUser', passUser.text.toString());
+
     final response = await dio.post('http://192.168.1.107:80/api/login',
         data: userformData,
         options: Options(headers: {
@@ -34,6 +35,8 @@ class _SignInViewState extends State<SignInView> {
           "Accept": "application/json"
         }));
     data.add(response);
+    print(box.read('emailUser'));
+    print(box.read('passUser'));
     //await prefs.setString('erer', response as String);
     setState(() {});
   }
@@ -62,6 +65,7 @@ class _SignInViewState extends State<SignInView> {
                       children: [
                         TextFormField(
                             controller: emailUser,
+                            initialValue: "",
                             keyboardType: TextInputType.emailAddress,
                             decoration: const InputDecoration(
                               labelText: "Mail",
@@ -84,10 +88,8 @@ class _SignInViewState extends State<SignInView> {
                           onPressed: () async {
                             await getHttp();
                             print('verified');
-                            await prefs?.setStringList(
-                                'userStock', ["$emailUser", "$passUser"]);
-                            print(prefs?.getStringList('userStock'));
-                            Get.to(HomePage());
+
+                            Get.to(() => HomePage());
                           },
                           color: Colors.amber,
                           child: const Text("Connecter"),
