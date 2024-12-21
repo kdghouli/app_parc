@@ -27,12 +27,6 @@ class SignInView extends StatelessWidget {
         backgroundColor: Colors.grey[400],
         appBar: AppBar(
           backgroundColor: Colors.grey,
-          actions: [
-            IconButton(
-              icon: Icon(Icons.logout),
-              onPressed: controller.logout,
-            ),
-          ],
         ),
         body: GetBuilder<LoginController>(
             builder: (controller) => Column(children: [
