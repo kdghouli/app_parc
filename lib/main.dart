@@ -1,6 +1,6 @@
 import 'package:app_parc/Testo/search_vhl.dart';
 import 'package:app_parc/view/InputView/comment_form.dart';
-import 'package:app_parc/view/auth/login_screen.dart';
+//import 'package:app_parc/view/auth/login_screen.dart';
 import 'package:app_parc/view/auth/signin_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       color: const Color.fromARGB(255, 92, 72, 11),
       getPages: [
-        GetPage(name: "/", page: () => LoginScreen()),
+        GetPage(name: "/", page: () => SignInView()),
         GetPage(name: "/camionview", page: () => CamionView()),
         GetPage(name: "/voitureview", page: () => VoitureView()),
         GetPage(name: "/parametreview", page: () => ParametreView()),
