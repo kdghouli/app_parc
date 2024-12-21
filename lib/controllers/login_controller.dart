@@ -1,3 +1,4 @@
+import 'package:app_parc/constant.dart';
 import 'package:app_parc/home_page.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -17,7 +18,7 @@ class LoginController extends GetxController {
 
   Future<void> login(String mail, String password) async {
     isLoading = true;
-    final response = await dio.post('http://192.168.1.107:80/api/login',
+    final response = await dio.post('$url/api/login',
         data: ({'email': mail, 'password': password}),
         options: Options(headers: {'Content-Type': 'application/json'}));
     isLoading = false;
@@ -27,14 +28,16 @@ class LoginController extends GetxController {
       print(response.data);
       storage.write('loggedIn', true);
       storage.write('data', data);
-      Get.off(() => HomePage());
       // storage.write('token_type', data['token_type']);
       // storage.write('user', data['user']);
       update();
       isLoggedIn = true;
-      Get.snackbar("Success", "Login successful");
+      Get.snackbar("Success", "Login successful $mail");
+      Get.off(() => HomePage());
     } else {
       Get.snackbar("Error", "Invalid Mail or Password");
+      mail = "";
+      password = "";
     }
   }
 
@@ -47,7 +50,7 @@ class LoginController extends GetxController {
 
   Future saveUser(String name, String mail, String password) async {
     isLoading = true;
-    final response = await dio.post('http://192.168.1.107:80/api/register',
+    final response = await dio.post('$url/api/register',
         data: ({'name': name, 'email': mail, 'password': password}),
         options: Options(headers: {
           "Content-Type": "application/json",
@@ -64,7 +67,7 @@ class LoginController extends GetxController {
       // storage.write('user', data['user']);
       isLoggedIn = true;
       update();
-      Get.snackbar("Success", "Login bien créer $name");
+      Get.snackbar("Success", "Login bien créer");
       Get.back();
     } else {
       Get.snackbar("Error", "Récreer ");

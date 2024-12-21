@@ -1,5 +1,6 @@
 import 'package:app_parc/Testo/data_table_view.dart';
 import 'package:app_parc/controllers/custom_search_delegate.dart';
+import 'package:app_parc/my_drawer.dart';
 import 'package:app_parc/view/camions/camion_view.dart';
 import 'package:app_parc/view/voitures/voiture_view.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MyDrawer(),
       appBar: AppBar(
         title: const Text("Parc Auto"),
         backgroundColor: Colors.grey[400],
