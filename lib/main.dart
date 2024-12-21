@@ -17,9 +17,9 @@ import 'package:app_parc/view/vhl_pages/vhl_view.dart';
 import 'package:get_storage/get_storage.dart';
 
 void main() async {
-  await GetStorage.init();
+  WidgetsFlutterBinding.ensureInitialized();
   print("بسم الله");
-
+  await GetStorage.init();
   runApp(const MyApp());
 }
 
@@ -30,24 +30,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       theme: ThemeData(useMaterial3: true),
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       color: const Color.fromARGB(255, 92, 72, 11),
-      routes: {
-        "/": (context) => LoginScreen(),
-        "camionview": (context) => CamionView(),
-        "voitureview": (context) => VoitureView(),
-        "parametreview": (context) => const ParametreView(),
-        "serviceform": (context) => const ServiceForm(),
-        "agenceform": (context) => const AgenceForm(),
-        "categoryform": (context) => const CategoryForm(),
-        "intituleform": (context) => const IntituleForm(),
-        "statusform": (context) => const StatusForm(),
-        "vhlform": (context) => const VhlForm(),
-        "commentform": (context) => const CommentForm(),
-        "vhlview": (context) => const VhlView(),
-        "search": (context) => const SearchVhl(),
-        "addComment": (context) => const CommentForm()
-      },
+      getPages: [
+        GetPage(name: "/", page: () => LoginScreen()),
+        GetPage(name: "/camionview", page: () => CamionView()),
+        GetPage(name: "/voitureview", page: () => VoitureView()),
+        GetPage(name: "/parametreview", page: () => ParametreView()),
+        GetPage(name: "/serviceform", page: () => ServiceForm()),
+        GetPage(name: "/agenceform", page: () => AgenceForm()),
+        GetPage(name: "/categoryform", page: () => CategoryForm()),
+        GetPage(name: "/intituleform", page: () => IntituleForm()),
+        GetPage(name: "/vhlform", page: () => VhlForm()),
+        GetPage(name: "/commentform", page: () => CommentForm()),
+        GetPage(name: "/vhlview", page: () => VhlView()),
+        GetPage(name: "/search", page: () => SearchVhl()),
+        GetPage(name: "/addComment", page: () => CommentForm()),
+        GetPage(name: "/statusform", page: () => StatusForm())
+      ],
     );
   }
 }

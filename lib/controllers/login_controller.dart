@@ -28,9 +28,9 @@ class LoginController extends GetxController {
       final data = jsonDecode(response.body);
       print(response.body);
       storage.write('loggedIn', true);
-      storage.write('access_token', data['access_token']);
-      storage.write('token_type', data['token_type']);
-      storage.write('user', data['user']);
+      storage.write('data', data);
+      // storage.write('token_type', data['token_type']);
+      // storage.write('user', data['user']);
 
       isLoggedIn.value = true;
       Get.snackbar("Success", "Login successful");
@@ -41,7 +41,7 @@ class LoginController extends GetxController {
 
   void logout() {
     storage.write('loggedIn', false);
-    storage.remove('token');
+    storage.remove('data');
     isLoggedIn.value = false;
   }
 }

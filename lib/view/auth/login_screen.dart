@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class LoginScreen extends StatelessWidget {
+  LoginScreen({super.key});
+
   final LoginController loginController = Get.put(LoginController());
   final TextEditingController mailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -22,7 +24,7 @@ class LoginScreen extends StatelessWidget {
             ],
           ),
           body: Center(
-            child: Text(loginController.storage.read('user').toString()),
+            child: Text(loginController.storage.read('data').toString()),
           ),
         );
       } else {

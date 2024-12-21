@@ -1,18 +1,12 @@
+import 'package:get/get.dart';
 
+class MyBinding implements Bindings {
+  @override
+  void dependencies() {
+    
+  }
 
-// import 'package:get/get_instance/src/bindings_interface.dart';
-
-// class MyBinding extends GetBindings{
-//   @override
-//   void dependencies() {
-//     // TODO: implement dependencies
-//   }
-
-
-
-
-  
-// }
+}
 
 
 
