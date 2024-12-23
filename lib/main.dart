@@ -2,6 +2,7 @@ import 'package:app_parc/Testo/search_vhl.dart';
 import 'package:app_parc/view/InputView/comment_form.dart';
 //import 'package:app_parc/view/auth/login_screen.dart';
 import 'package:app_parc/view/auth/signin_view.dart';
+import 'package:app_parc/view/user_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:app_parc/view/InputView/agence_form.dart';
@@ -46,7 +47,8 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/vhlview", page: () => VhlView()),
         GetPage(name: "/search", page: () => SearchVhl()),
         GetPage(name: "/addComment", page: () => CommentForm()),
-        GetPage(name: "/statusform", page: () => StatusForm())
+        GetPage(name: "/statusform", page: () => StatusForm()),
+        GetPage(name: "/userview", page: () => UserView())
       ],
     );
   }

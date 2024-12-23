@@ -1,5 +1,6 @@
 import 'package:app_parc/controllers/login_controller.dart';
 import 'package:app_parc/view/auth/signin_view.dart';
+import 'package:app_parc/view/user_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,9 +22,14 @@ class MyDrawer extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(
-                      Icons.add_moderator,
-                      size: 40,
+                    IconButton(
+                      onPressed: () {
+                        Get.to(() => UserView());
+                      },
+                      icon: Icon(
+                        Icons.person,
+                        size: 40,
+                      ),
                     ),
                     Text("kdghouli@gmail"),
                   ]),
@@ -34,13 +40,13 @@ class MyDrawer extends StatelessWidget {
                 thickness: 1,
                 color: Colors.cyan,
               ),
-              Text("data"),
-              Text("data"),
-              Text("data"),
-              Text("data"),
-              Text("data"),
-              Text("data"),
-              Text("data"),
+              Text("Visites techniques"),
+              Text("Assurances"),
+              Text("Carnets de circulation"),
+              Text("Tachygraphes"),
+              Text("Contrats de location"),
+              Text("Listes par ...."),
+              Text("Tableau de bord"),
               Divider(
                 indent: 2,
                 endIndent: 3,
