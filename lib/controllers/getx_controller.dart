@@ -8,9 +8,7 @@ class TestGetxController extends GetxController {
 
   @override
   void onInit() {
-
     super.onInit();
-    
   }
 
   @override

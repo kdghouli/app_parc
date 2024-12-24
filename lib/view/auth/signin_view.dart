@@ -46,9 +46,8 @@ class SignInView extends StatelessWidget {
                               children: [
                                 Center(
                                   child: Text((controller.storage
-                                          .read('data')
-                                          .toString()) ??
-                                      "-"),
+                                      .read('data')
+                                      .toString())),
                                 ),
                                 TextFormField(
                                     controller: emailUser,

@@ -1,6 +1,5 @@
 // // import 'package:app_parc/home_page.dart';
 
-
 // //  Flutter/Flutter_Auth_Guide/lib
 // // import 'package:app_parc/view/auth/signin_view.dart';
 // // import 'package:dio/dio.dart';
@@ -43,7 +42,6 @@
 // //   }
 // // }
 
-
 //     Future<Response> registerUser() async {
 //         //IMPLEMENT USER REGISTRATION
 //     }
@@ -59,7 +57,6 @@
 //     Future<Response> logout() async {
 //         //IMPLEMENT USER LOGOUT
 //      }
-
 
 //      Future<Response> registerUser(Map<String, dynamic>? userData) async {
 //         try {
@@ -77,7 +74,6 @@
 //         }
 //       }
 //     }
-
 
 //     Future<Response> login(String email, String password) async {
 //         try {
@@ -98,7 +94,6 @@
 //       }
 //     }
 
-
 //      Future<Response> getUserProfileData(String accesstoken) async {
 //         try {
 //           Response response = await _dio.get(
@@ -115,7 +110,6 @@
 //           return e.response!.data;
 //         }
 //     }
-
 
 //     Future<Response> logout(String accessToken) async {
 //         try {

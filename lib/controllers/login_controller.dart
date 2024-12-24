@@ -1,5 +1,6 @@
 import 'package:app_parc/constant.dart';
 import 'package:app_parc/home_page.dart';
+import 'package:app_parc/models/request_login.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:dio/dio.dart';
@@ -22,7 +23,7 @@ class LoginController extends GetxController {
         data: ({'email': mail, 'password': password}),
         options: Options(headers: {'Content-Type': 'application/json'}));
     isLoading = false;
-
+    //final dataa = RequestLogin();
     if (response.statusCode == 200) {
       final data = response.data;
       print(response.data);
@@ -30,10 +31,10 @@ class LoginController extends GetxController {
       storage.write('data', data);
       // storage.write('token_type', data['token_type']);
       // storage.write('user', data['user']);
-      update();
       isLoggedIn = true;
       Get.snackbar("Success", "Login successful $mail");
       Get.off(() => HomePage());
+      update();
     } else {
       Get.snackbar("Error", "Invalid Mail or Password");
       mail = "";

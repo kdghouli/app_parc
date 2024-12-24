@@ -3,11 +3,5 @@ import 'package:get/get.dart';
 
 class MyMidleware extends GetMiddleware {
   @override
-  RouteSettings? redirect(String? route) {
-
-
-
-
-    
-  }
+  RouteSettings? redirect(String? route) {}
 }

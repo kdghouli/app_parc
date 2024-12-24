@@ -60,7 +60,8 @@ class _VhlViewState extends State<VhlView> {
         actions: [
           IconButton(
             onPressed: () {
-              Get.toNamed("addComment",arguments:Get.arguments[0]['matricule'] );
+              Get.toNamed("addComment",
+                  arguments: Get.arguments[0]['matricule']);
             },
             icon: Icon(Icons.speaker_notes),
             iconSize: 24,
